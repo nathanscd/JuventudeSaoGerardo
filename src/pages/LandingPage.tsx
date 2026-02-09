@@ -22,7 +22,7 @@ const LandingPage: React.FC = () => {
         <div className="hero-content">
           <div className="badge-glass">
             <span className="dot-pulse"></span>
-            Juventude São Gerardo • Desde 2005
+            Juventude São Gerardo • Desde 2024
           </div>
           
           <h1 className="hero-title">
@@ -45,13 +45,12 @@ const LandingPage: React.FC = () => {
               <div className="widget-icon">🔥</div>
               <div className="widget-info">
                 <strong>Próximo Encontro</strong>
-                <span>Sábado às 19:30h</span>
+                <span>Sábado às 16:30h</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Elemento Visual Flutuante */}
         <div className="hero-visual">
           <div className="glass-card-floating">
             <div className="card-inner-glow"></div>

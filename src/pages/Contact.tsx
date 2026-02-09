@@ -1,0 +1,112 @@
+import React, { useState } from 'react'; 
+import Header from '../components/Header'; 
+import '../Standard.css'; 
+
+const Contact: React.FC = () => {
+  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
+
+  // Alterado para React.FormEvent
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus('sending');
+    // Simulação de envio
+    setTimeout(() => setFormStatus('sent'), 2000);
+  };
+
+  return (
+    <div className="contact-wrapper">
+      <Header />
+      
+      {/* Texture & Ambient Light */}
+      <div className="noise-overlay"></div>
+      <div className="ambient-orbs-contact">
+        <div className="orb-c orb-c-1"></div>
+        <div className="orb-c orb-c-2"></div>
+      </div>
+
+      <main className="contact-container">
+        
+        {/* Lado Esquerdo: Infos & Vibe */}
+        <section className="contact-info fade-up">
+          <div className="info-header">
+            <span className="badge-glass">FALE CONOSCO</span>
+            <h1 className="title-display">
+              VAMOS <br/>
+              <span className="gradient-text">CONECTAR</span>
+            </h1>
+            <p className="description">
+              Quer tirar dúvidas, pedir oração ou fazer parte da equipe?
+              A gente quer te ouvir. O Espírito sopra onde quer, e talvez ele tenha soprado você até aqui.
+            </p>
+          </div>
+
+          <div className="social-grid">
+            <a href="#" className="social-card instagram">
+              <div className="icon">📸</div>
+              <span>@juventudesaogerardo</span>
+              <div className="arrow">↗</div>
+            </a>
+            <a href="#" className="social-card location">
+              <div className="icon">📍</div>
+              <span>Igreja São Gerardo</span>
+              <small>Av. Bezerra de Menezes, 1256 - São Gerardo</small>
+            </a>
+          </div>
+        </section>
+
+        {/* Lado Direito: Formulário Glass */}
+        <section className="contact-form-section fade-up delay-100">
+          <div className="glass-form-card">
+            {formStatus === 'sent' ? (
+              <div className="success-state">
+                <div className="success-icon">✨</div>
+                <h2>Mensagem Enviada!</h2>
+                <p>Alguém da nossa equipe vai entrar em contato (ou rezar por você) em breve.</p>
+                <button onClick={() => setFormStatus('idle')} className="btn-reset">Enviar outra</button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit}>
+                <h3 className="form-title">Mande sua mensagem</h3>
+                
+                <div className="input-group">
+                  <label>Seu Nome</label>
+                  <input type="text" placeholder="Como você gosta de ser chamado?" required />
+                </div>
+
+                <div className="input-group">
+                  <label>WhatsApp / Email</label>
+                  <input type="text" placeholder="Pra gente te responder" required />
+                </div>
+
+                <div className="input-group">
+                  <label>Assunto</label>
+                  <div className="select-wrapper">
+                    <select required defaultValue="">
+                      <option value="" disabled>Sobre o que vamos falar?</option>
+                      <option value="prayer">Pedido de Oração 🙏</option>
+                      <option value="info">Dúvida sobre o Grupo ❔</option>
+                      <option value="join">Quero Servir 🔥</option>
+                      <option value="other">Outro Assunto ✉️</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="input-group">
+                  <label>Sua Mensagem</label>
+                  <textarea rows={4} placeholder="Abra seu coração..." required></textarea>
+                </div>
+
+                <button type="submit" className="btn-submit-glow" disabled={formStatus === 'sending'}>
+                  {formStatus === 'sending' ? 'Enviando...' : 'ENVIAR MENSAGEM'}
+                  <div className="btn-shine"></div>
+                </button>
+              </form>
+            )}
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+};
+
+export default Contact;

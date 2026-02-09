@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import '../BusForm.css';
 import Header from '../components/Header';
 
@@ -134,6 +135,10 @@ const BusForm: React.FC = () => {
   return (
     <div className="form-wrapper">
       <Header />
+      
+      {/* Botão MOVIDO para fora do form-container para flutuar no canto esquerdo da tela */}
+      <Link to="/eventos" className="back-link">← Voltar para os Eventos</Link>
+
       <div className="background-shapes">
         <div className="shape shape-1"></div>
         <div className="shape shape-2"></div>
@@ -141,6 +146,7 @@ const BusForm: React.FC = () => {
       </div>
 
       <div className={`form-container ${step === 'ticket' ? 'wide-mode' : ''}`}>
+        
         {step === 'form' ? (
           <>
             <header className="form-header">

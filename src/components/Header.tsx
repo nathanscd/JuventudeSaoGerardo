@@ -24,7 +24,8 @@ const Header: React.FC = () => {
 
         <div className="nav-menu">
           <Link to="/" className="nav-link">Início</Link>
-          <Link to="/forms" className="nav-link">Eventos</Link>
+          <Link to="/eventos" className="nav-link">Eventos</Link>
+          <Link to="/fotos" className="nav-link">Fotos</Link>
           <Link to="/contato" className="nav-link">Contato</Link>
           <button className="btn-header">
             PARTICIPAR DO GRUPO

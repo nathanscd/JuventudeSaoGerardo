@@ -1,0 +1,134 @@
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 24px 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-bottom: 1px solid transparent;
+}
+
+.nav-container.scrolled {
+  padding: 16px 0;
+  background: rgba(10, 5, 20, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+/* Logo */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-symbol {
+  font-size: 2rem;
+  color: #d946ef; /* Rosa Neon */
+  filter: drop-shadow(0 0 10px rgba(217, 70, 239, 0.6));
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+  font-family: 'Oswald', sans-serif; /* Fonte estilo Colo de Deus */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo-text span:first-child {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.logo-text .highlight {
+  font-size: 1.1rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  color: #a1a1aa;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #d946ef;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.btn-header {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%);
+  transition: all 0.2s;
+}
+
+.btn-header:hover {
+  background: #d946ef;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(217, 70, 239, 0.4);
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar { width: 30px; height: 3px; background: white; }
+.bar.short { width: 20px; align-self: flex-end; }
+
+@media (max-width: 768px) {
+  .nav-menu { display: none; }
+  .mobile-toggle { display: flex; }
+}

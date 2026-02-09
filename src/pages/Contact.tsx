@@ -5,11 +5,9 @@ import '../Standard.css';
 const Contact: React.FC = () => {
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
 
-  // Alterado para React.FormEvent
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('sending');
-    // Simulação de envio
     setTimeout(() => setFormStatus('sent'), 2000);
   };
 

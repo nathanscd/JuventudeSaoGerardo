@@ -36,7 +36,7 @@ const Events: React.FC = () => {
             <div className="card-badge">VAGAS LIMITADAS</div>
             <div className="card-content">
               <div className="event-date">
-                <span className="day">23</span>
+                <span className="day">25</span>
                 <span className="month">JUL</span>
               </div>
               <div className="event-details">

@@ -104,6 +104,10 @@ const JoinUs: React.FC = () => {
         </section>
 
       </main>
+
+      <footer className="simple-footer">
+        <p>© 2026 Jovens São Gerardo. Feito com fé e código.</p>
+      </footer>
     </div>
   );
 };

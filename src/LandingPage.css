@@ -167,6 +167,7 @@ body {
   line-height: 1.7;
   color: var(--text-muted);
   max-width: 500px;
+  text-align: justify;
   margin-bottom: 40px;
 }
 
@@ -367,6 +368,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  transition: all 0.3s ease;
 }
 
 .glass-card:hover {
@@ -388,6 +390,7 @@ body {
   background-size: cover;
   background-position: center;
   filter: grayscale(100%);
+  transition: all 0.4s ease;
 }
 
 .glass-card:hover .card-bg-image {
@@ -396,7 +399,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Placeholders para imagens (substitua por URLs reais) */
 .worship-bg { background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80'); }
 .word-bg { background-image: url('https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?auto=format&fit=crop&q=80'); }
 .community-bg { background-image: url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80'); }
@@ -448,7 +450,6 @@ body {
   color: black;
 }
 
-/* Layout do Bento Grid */
 .featured-card {
   grid-column: span 2;
   grid-row: span 2;
@@ -464,8 +465,8 @@ body {
   grid-row: span 1;
 }
 
-/* Footer */
 .simple-footer {
+  height: 260px;
   text-align: center;
   padding: 40px;
   color: var(--text-muted);
@@ -474,7 +475,6 @@ body {
   background: rgba(0,0,0,0.2);
 }
 
-/* Responsividade */
 @media (max-width: 900px) {
   .hero-section {
     flex-direction: column;

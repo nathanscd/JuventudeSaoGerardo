@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header'; 
-import { useNavigate } from 'react-router-dom'; // Assumindo react-router
+import { useNavigate } from 'react-router-dom'; 
 import '../Standard.css';
 
 const Events: React.FC = () => {
@@ -13,14 +13,10 @@ const Events: React.FC = () => {
   return (
     <div className="events-wrapper">
       <Header />
-      
-      {/* Texture & Light */}
-      <div className="noise-overlay"></div>
+
       <div className="spotlight-orb"></div>
 
       <main className="events-container">
-        
-        {/* Breve Apresentação */}
         <section className="profile-section fade-in">
           <div className="profile-image">
             <span className="profile-emoji">🔥</span>
@@ -34,10 +30,8 @@ const Events: React.FC = () => {
           </p>
         </section>
 
-        {/* Link Grid */}
+        
         <section className="links-grid fade-up">
-          
-          {/* DESTAQUE PRINCIPAL: HALLELUYA */}
           <div className="link-card featured-event" onClick={handleHalleluyaClick}>
             <div className="card-badge">VAGAS LIMITADAS</div>
             <div className="card-content">
@@ -54,7 +48,6 @@ const Events: React.FC = () => {
             <div className="card-bg-glow"></div>
           </div>
 
-          {/* Outros Links */}
           <a href="https://www.instagram.com/juventudesaogerardo/" target="_blank" rel="noopener noreferrer" className="link-card glass-btn">
             <div className="icon-box instagram">📸</div>
             <span>Nosso Instagram</span>

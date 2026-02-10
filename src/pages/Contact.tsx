@@ -15,8 +15,6 @@ const Contact: React.FC = () => {
     <div className="contact-wrapper">
       <Header />
       
-      {/* Texture & Ambient Light */}
-      <div className="noise-overlay"></div>
       <div className="ambient-orbs-contact">
         <div className="orb-c orb-c-1"></div>
         <div className="orb-c orb-c-2"></div>
@@ -103,6 +101,9 @@ const Contact: React.FC = () => {
           </div>
         </section>
       </main>
+      <footer className="simple-footer">
+        <p>© 2026 Jovens São Gerardo. Feito com fé e código.</p>
+      </footer>
     </div>
   );
 };

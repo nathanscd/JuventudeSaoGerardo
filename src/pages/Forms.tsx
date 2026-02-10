@@ -136,7 +136,6 @@ const BusForm: React.FC = () => {
     <div className="form-wrapper">
       <Header />
       
-      {/* Botão MOVIDO para fora do form-container para flutuar no canto esquerdo da tela */}
       <Link to="/eventos" className="back-link">← Voltar para os Eventos</Link>
 
       <div className="background-shapes">

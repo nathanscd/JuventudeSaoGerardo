@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;600;700&family=Libre+Barcode+39+Text&display=swap');
+
+.join-wrapper {
+  min-height: 100vh;
+  position: relative;
+  background-color: #020617;
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Fundo */
+.spotlight-top {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.invite-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 140px 24px 80px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+/* --- HERO SECTION --- */
+.invite-hero { text-align: center; }
+
+.floating-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fbbf24; /* Amarelo ouro */
+  margin-bottom: 24px;
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
+  animation: floatBadge 4s infinite ease-in-out;
+}
+
+.invite-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.9;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.stroke-text {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+}
+
+.invite-subtitle {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.highlight {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #d946ef;
+  text-underline-offset: 4px;
+}
+
+/* --- HOLOGRAPHIC TICKET (A Mágica) --- */
+.ticket-section { width: 100%; max-width: 700px; perspective: 1000px; }
+
+.holographic-ticket {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+}
+
+.holographic-ticket:hover {
+  transform: rotateX(5deg) rotateY(-5deg) scale(1.02);
+}
+
+/* Efeito Holográfico */
+.ticket-glow {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(125deg, transparent 30%, rgba(255,255,255,0.1) 40%, rgba(217,70,239,0.2) 50%, transparent 60%);
+  background-size: 200% 200%;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  animation: hologram 6s infinite linear;
+}
+
+.ticket-left { flex: 1; padding: 30px; position: relative; z-index: 2; }
+
+.ticket-label {
+  font-size: 0.7rem; letter-spacing: 2px; color: #d946ef; font-weight: 800;
+  display: block; margin-bottom: 10px;
+}
+
+.ticket-left h2 {
+  font-family: 'Syne', sans-serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1;
+}
+
+.ticket-info { display: flex; gap: 30px; }
+
+.info-item { display: flex; align-items: center; gap: 12px; }
+.info-item .icon { font-size: 1.5rem; background: rgba(255,255,255,0.1); padding: 8px; border-radius: 8px; }
+.info-item div { display: flex; flex-direction: column; }
+.info-item strong { font-size: 0.9rem; }
+.info-item small { color: #94a3b8; font-size: 0.8rem; }
+
+/* Linha pontilhada do ticket */
+.ticket-divider {
+  width: 2px;
+  background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.2) 0, rgba(255,255,255,0.2) 10px, transparent 10px, transparent 20px);
+  position: relative;
+}
+/* Bolinhas do rasgo do ticket */
+.ticket-divider::before, .ticket-divider::after {
+  content: ''; position: absolute; left: -10px; width: 22px; height: 22px;
+  background: #020617; border-radius: 50%;
+}
+.ticket-divider::before { top: -11px; }
+.ticket-divider::after { bottom: -11px; }
+
+.ticket-right {
+  width: 140px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.2);
+  position: relative; z-index: 2;
+}
+
+.sideways {
+  writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg);
+  font-size: 0.9rem; letter-spacing: 2px; color: rgba(255,255,255,0.5); font-weight: 700;
+}
+
+.barcode {
+  height: 60px; width: 100%;
+  background-image: repeating-linear-gradient(90deg, #fff 0, #fff 2px, transparent 2px, transparent 4px, #fff 4px, #fff 8px);
+  opacity: 0.7;
+}
+
+.ticket-id { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem; }
+
+/* --- FEARS GRID --- */
+.fears-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; width: 100%;
+}
+
+.fear-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 24px; border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.fear-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.05); }
+
+.fear-card .emoji { font-size: 2.5rem; margin-bottom: 16px; display: block; }
+.fear-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: #fff; }
+.fear-card p { font-size: 0.9rem; color: #94a3b8; line-height: 1.5; }
+
+/* --- LOCATION CTA --- */
+.location-cta { width: 100%; }
+
+.map-glass {
+  background: linear-gradient(135deg, #1e1b4b, #312e81);
+  border-radius: 24px; padding: 40px; text-align: center;
+  position: relative; overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.map-content { position: relative; z-index: 2; }
+.map-content h2 { font-family: 'Syne', sans-serif; font-size: 1.8rem; margin-bottom: 8px; }
+.map-content p { color: #c7d2fe; margin-bottom: 30px; font-size: 1.1rem; }
+
+.cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+.btn-map, .btn-cal {
+  padding: 14px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.9rem;
+  transition: all 0.3s; border: none; cursor: pointer;
+}
+
+.btn-map { background: white; color: black; }
+.btn-map:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,255,255,0.4); }
+
+.btn-cal { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); }
+.btn-cal:hover { background: rgba(255,255,255,0.2); }
+
+/* Animações */
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); }
+}
+@keyframes hologram {
+  0% { background-position: 0% 0%; } 100% { background-position: 200% 200%; }
+}
+
+.fade-up { opacity: 0; animation: fadeUpAnim 0.8s forwards ease-out; }
+.delay-100 { animation-delay: 0.2s; }
+.delay-200 { animation-delay: 0.4s; }
+.delay-300 { animation-delay: 0.6s; }
+
+@keyframes fadeUpAnim { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .ticket-section { max-width: 100%; }
+  .holographic-ticket { flex-direction: column; }
+  .ticket-divider { width: 100%; height: 2px; background: repeating-linear-gradient(to right, rgba(255,255,255,0.2) 0, rgba(255,255,255,0.2) 10px, transparent 10px, transparent 20px); }
+  .ticket-divider::before { top: -11px; left: -11px; }
+  .ticket-divider::after { top: -11px; right: -11px; left: auto; }
+  .ticket-right { width: 100%; flex-direction: row; padding: 15px; }
+  .sideways { writing-mode: horizontal-tb; transform: none; }
+  .barcode { height: 30px; width: 100px; }
+  
+  .fears-grid { grid-template-columns: 1fr; }
+  .invite-title { font-size: 3rem; }
+}

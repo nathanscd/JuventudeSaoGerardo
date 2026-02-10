@@ -1,134 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Syne:wght@700;800&family=Oswald:wght@500;700&display=swap');
+
+/* =========================================
+   HEADER CONTAINER (GLASS PREMIUM)
+   ========================================= */
 .nav-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 10000;
   padding: 24px 0;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   border-bottom: 1px solid transparent;
 }
 
 .nav-container.scrolled {
-  padding: 16px 0;
-  background: rgba(10, 5, 20, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 0;
+  background: rgba(2, 6, 23, 0.75); /* Mais escuro e transparente */
+  backdrop-filter: blur(20px) saturate(180%); /* Saturação aumenta a vivacidade */
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
 .nav-content {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
-/* Logo */
+/* =========================================
+   LOGO (COM INTERAÇÃO)
+   ========================================= */
 .logo-area {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  text-decoration: none;
+  z-index: 10002;
+  cursor: pointer;
+  group: hover; /* Prepara para hover */
 }
 
 .logo-symbol {
-  font-size: 2rem;
-  color: #d946ef; /* Rosa Neon */
-  filter: drop-shadow(0 0 10px rgba(217, 70, 239, 0.6));
+  font-size: 2.2rem;
+  color: #d946ef;
+  filter: drop-shadow(0 0 8px rgba(217, 70, 239, 0.5));
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.logo-area:hover .logo-symbol {
+  transform: rotate(15deg) scale(1.1);
+  filter: drop-shadow(0 0 15px rgba(217, 70, 239, 0.8));
 }
 
 .logo-text {
   display: flex;
   flex-direction: column;
   line-height: 0.9;
-  font-family: 'Oswald', sans-serif; /* Fonte estilo Colo de Deus */
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .logo-text span:first-child {
-  font-size: 0.8rem;
-  color: #fff;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s;
 }
 
 .logo-text .highlight {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: #fff;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Menu */
+.logo-area:hover .logo-text span:first-child {
+  color: #fff;
+}
+
+/* =========================================
+   MENU DESKTOP
+   ========================================= */
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 40px;
 }
 
 .nav-link {
-  color: #a1a1aa;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 0.85rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
   position: relative;
+  padding: 4px 0;
 }
 
 .nav-link:hover {
   color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+/* Efeito de traço laser que nasce do centro */
 .nav-link::after {
   content: '';
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: #d946ef;
-  transition: width 0.3s ease;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, #d946ef, transparent);
+  transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 0 10px #d946ef;
 }
 
 .nav-link:hover::after {
   width: 100%;
 }
 
+/* Botão "Participar" (Cyber Style) */
 .btn-header {
+  position: relative;
   background: #fff;
   color: #000;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 28px;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
+  font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%);
-  transition: all 0.2s;
+  /* Recorte angular futurista */
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+}
+
+/* Efeito de brilho passando (Shine) */
+.btn-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  transition: left 0.5s;
+  z-index: 1;
+}
+
+.btn-header:hover::before {
+  left: 100%;
 }
 
 .btn-header:hover {
   background: #d946ef;
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(217, 70, 239, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(217, 70, 239, 0.5);
 }
 
-/* Mobile Toggle */
+/* =========================================
+   MOBILE TOGGLE (HAMBURGUER ANIMADO)
+   ========================================= */
 .mobile-toggle {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  justify-content: center;
+  gap: 6px;
   cursor: pointer;
+  z-index: 11000;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background 0.3s;
 }
 
-.bar { width: 30px; height: 3px; background: white; }
-.bar.short { width: 20px; align-self: flex-end; }
+.mobile-toggle:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
 
+.bar {
+  width: 28px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6); /* Bouncy effect */
+  transform-origin: center;
+}
+
+.bar.short {
+  width: 18px;
+  align-self: flex-end;
+}
+
+/* Animação Ativa */
+.mobile-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  width: 28px;
+}
+
+.mobile-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.mobile-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  width: 28px;
+}
+
+/* =========================================
+   MENU MOBILE (FULLSCREEN CINEMATIC)
+   ========================================= */
 @media (max-width: 768px) {
-  .nav-menu { display: none; }
-  .mobile-toggle { display: flex; }
+  .nav-content { padding: 0 20px; }
+  .mobile-toggle { display: flex !important; }
+
+  /* Ajuste no botão Desktop para sumir no mobile */
+  .nav-menu > .btn-header, 
+  .nav-menu > .nav-link { 
+    display: none; /* Esconde os elementos originais do flex */
+  }
+
+  /* O Container do Menu Mobile */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    
+    /* Layout */
+    display: flex !important; /* Force flex */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4vh;
+    
+    /* Estilo Visual Dark Mode Profundo */
+    background: #020617; /* Fallback */
+    background: radial-gradient(circle at 100% 0%, #1a0b2e 0%, #020617 60%);
+    
+    /* Animação de Entrada */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.5s;
+    z-index: 10099;
+  }
+
+  /* Textura de Granulação (Noise) no Menu Mobile */
+  .nav-menu::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Estado Ativo */
+  .nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* RE-ESTILIZANDO OS LINKS PARA O MOBILE */
+  /* Precisamos forçar o display block nos links dentro do menu active */
+  .nav-menu.active .nav-link,
+  .nav-menu.active .btn-header {
+    display: block;
+  }
+
+  .nav-link {
+    font-family: 'Syne', sans-serif; /* Fonte Display */
+    font-size: 3rem; /* Enorme */
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.4); /* Texto vazado estilo streetwear */
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding: 10px;
+    
+    /* Animação Inicial */
+    opacity: 0;
+    transform: translateY(50px) rotate(5deg);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* Hover no Mobile (Toque) */
+  .nav-link:active {
+    color: #fff;
+    -webkit-text-stroke: 0;
+    text-shadow: 0 0 20px rgba(217, 70, 239, 0.8);
+    transform: scale(0.95);
+  }
+
+  /* Botão CTA no Mobile */
+  .btn-header {
+    margin-top: 40px;
+    width: 80%;
+    max-width: 320px;
+    padding: 22px;
+    font-size: 1.2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #d946ef 0%, #7c3aed 100%);
+    box-shadow: 0 10px 40px -10px rgba(124, 58, 237, 0.5);
+    clip-path: none; /* Remove o corte no mobile para ficar mais clean */
+    border-radius: 16px;
+    
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* --- CASCATA DE ANIMAÇÃO (Quando active) --- */
+  
+  .nav-menu.active .nav-link {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+
+  /* Preenchimento gradual ao abrir (Opcional: Deixa o link sólido) */
+  .nav-menu.active .nav-link {
+    color: #fff;
+    -webkit-text-stroke: 0;
+  }
+
+  .nav-menu.active .btn-header {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Delays */
+  .nav-menu.active .nav-link:nth-child(1) { transition-delay: 0.1s; }
+  .nav-menu.active .nav-link:nth-child(2) { transition-delay: 0.2s; }
+  .nav-menu.active .nav-link:nth-child(3) { transition-delay: 0.3s; }
+  .nav-menu.active .nav-link:nth-child(4) { transition-delay: 0.4s; }
+  .nav-menu.active .btn-header { transition-delay: 0.5s; }
+}
+
+/* =========================================
+   PEQUENOS CELULARES (iPhone SE, etc)
+   ========================================= */
+@media (max-width: 380px) {
+  .nav-link { font-size: 2.2rem; }
+  .btn-header { padding: 18px; font-size: 1rem; }
 }

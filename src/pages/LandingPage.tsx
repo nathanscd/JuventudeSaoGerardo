@@ -1,8 +1,11 @@
 import React from 'react';
 import Header from '../components/Header'; 
 import '../LandingPage.css';
+import { useNavigate } from 'react-router-dom';
 
 const LandingPage: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="landing-wrapper">
       <Header />
@@ -30,7 +33,7 @@ const LandingPage: React.FC = () => {
           </p>
 
           <div className="hero-actions">
-            <button className="btn-glow">
+            <button className="btn-glow" onClick={() => navigate('/join')}>
               QUERO PARTICIPAR
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>

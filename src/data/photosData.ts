@@ -13,7 +13,7 @@ const sizePattern: ('wide' | 'tall' | 'big' | undefined)[] = [
 export const galleryPhotos: PhotoItem[] = [
   {
     id: 1,
-    src: "/Gallery/foto-grupo-1.jpeg", 
+    src: "/Gallery/foto-grupo%20(1).jpeg", 
     alt: "Momento de Adoração",
     caption: "O céu desceu neste lugar",
     size: 'big'

@@ -41,8 +41,8 @@ const LandingPage: React.FC = () => {
           <div className="glass-card-floating">
             <div className="card-inner-glow"></div>
             <span className="floating-emoji">🕊️</span>
-            <h3>Vem Espírito</h3>
-            <p>"Onde está o Espírito do Senhor, milagres acontecem."</p>
+            <h3>"Um amigo fiel é uma poderosa proteção: quem o achou, descobriu um tesouro."</h3>
+            <p>"Eclesiástico 6, 14"</p>
           </div>
         </div>
       </section>

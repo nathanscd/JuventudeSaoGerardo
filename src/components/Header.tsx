@@ -27,6 +27,7 @@ const Header: React.FC = () => {
     <>
       <nav className={`header ${scrolled ? 'scrolled' : ''}`}>
         <Link to="/" className='name' onClick={() => setMenuOpen(false)}>
+          <img src="Logo.png" alt="Boa Nova Logo" />
           <h1 className="Title"><span>grupo de oração</span><br/>Boa Nova</h1>
         </Link>
 

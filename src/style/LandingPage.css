@@ -389,9 +389,9 @@ body {
   transform: scale(1.05);
 }
 
-.worship-bg { background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80'); }
-.word-bg { background-image: url('https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?auto=format&fit=crop&q=80'); }
-.community-bg { background-image: url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80'); }
+.worship-bg { background-image: url('Louvor.jpeg'); }
+.word-bg { background-image: url('Pregação.jpeg'); }
+.community-bg { background-image: url('Comunhão.jpeg') ; }
 
 .card-content {
   position: relative;

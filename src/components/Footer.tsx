@@ -1,20 +1,31 @@
-import React from 'react'
-import './style/Footer.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './style/Footer.css';
 
-const Footer = () => {
+const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className="footer-container">
-        <div className="brand">2026 JSG • "Temos de ir atras das pessoas, porque elas podem ter fome de comida ou de amizade" <br/> <span>Santa Teresa de Calcutá</span></div>
-        
-        <div className="links">
-          <a href="#">Instagram</a>
-          <a href="#">YouTube</a>
-          <a href="#">Contato</a>
-        </div>
+    <footer className="footer-container">
+      <div className="footer-glow"></div>
 
-        <p className="copyright">© 2024 Todos os direitos reservados.</p>
+      <div className="brand">
+        "Temos de ir atrás das pessoas, porque elas podem ter fome de comida ou de amizade"
+        <br />
+        <span>Santa Teresa de Calcutá</span>
       </div>
-  )
-}
+      
+      <div className="links">
+        <a href="https://instagram.com/juventudesaogerardo" target="_blank" rel="noopener noreferrer">Instagram</a>      
+        <Link to="/contact">Contato</Link>
+        <Link to="/join">Participar</Link>
+      </div>
 
-export default Footer
+      <p className="copyright">
+        BOA NOVA • © {currentYear} Todos os direitos reservados.
+      </p>
+    </footer>
+  );
+};
+
+export default Footer;

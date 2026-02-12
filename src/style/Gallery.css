@@ -1,7 +1,3 @@
-/* =========================================
-   GALLERY STYLE - REFINED & POLISHED
-   ========================================= */
-
 :root {
   --bg-deep: #020617;
   --primary-neon: #a855f7;
@@ -23,7 +19,6 @@
   padding-bottom: 80px;
 }
 
-/* --- AMBIENT BACKGROUND --- */
 .ambient-orbs-gallery {
   position: absolute; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: hidden;
 }
@@ -49,14 +44,12 @@
   100% { transform: translate(30px, 40px); }
 }
 
-/* --- NOISE TEXTURE --- */
 .noise-overlay {
   position: fixed; top: 0; left: 0; width: 100%; height: 100%;
   pointer-events: none; z-index: 1; opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-/* --- CONTAINER --- */
 .gallery-container {
   max-width: 1280px; 
   margin: 0 auto; 
@@ -65,7 +58,6 @@
   z-index: 2;
 }
 
-/* --- HEADER SECTION --- */
 .gallery-header { 
   text-align: center; 
   margin-bottom: 80px; 
@@ -111,50 +103,44 @@
   line-height: 1.6;
 }
 
-/* --- MASONRY GRID (O CORAÇÃO DA GALERIA) --- */
 .photo-masonry {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-auto-rows: 280px; /* Altura base da célula */
-  grid-auto-flow: dense; /* Preenche buracos vazios */
+  grid-auto-rows: 280px; 
+  grid-auto-flow: dense;
   gap: 24px;
   perspective: 1200px;
 }
 
-/* Tamanhos Especiais */
 .photo-card.wide { grid-column: span 2; }
 .photo-card.tall { grid-row: span 2; }
 .photo-card.big { grid-column: span 2; grid-row: span 2; }
 
-/* --- CARD STYLE (POLAROID MODERNA) --- */
 .glass-polaroid {
   position: relative;
   background: var(--glass-surface);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
-  padding: 10px; /* Moldura interna */
+  padding: 10px; 
   cursor: pointer;
   overflow: hidden;
   
-  /* Transição Suave */
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
               box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
               border-color 0.3s ease;
   z-index: 1;
 }
 
-/* Hover State - Menos agressivo, mais elegante */
 .glass-polaroid:hover {
   z-index: 10;
   transform: translateY(-8px) scale(1.02);
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow: 
     0 20px 40px -10px rgba(0, 0, 0, 0.6),
-    0 0 30px rgba(168, 85, 247, 0.15); /* Brilho roxo sutil */
+    0 0 30px rgba(168, 85, 247, 0.15); 
 }
 
-/* Estrutura Interna */
 .polaroid-inner {
   width: 100%; height: 100%;
   border-radius: 12px;
@@ -171,15 +157,14 @@
   width: 100%; height: 100%; 
   object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.4s ease;
-  filter: grayscale(20%) contrast(1.1); /* Estilo cinematográfico */
+  filter: grayscale(20%) contrast(1.1); 
 }
 
 .glass-polaroid:hover .img-container img {
-  transform: scale(1.08); /* Zoom in sutil */
+  transform: scale(1.08);
   filter: grayscale(0%) contrast(1);
 }
 
-/* Overlay Escuro para Legenda */
 .overlay-glow {
   position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 50%);
@@ -189,12 +174,11 @@
 
 .glass-polaroid:hover .overlay-glow { opacity: 0.8; }
 
-/* --- LEGENDA (CAPTION) --- */
 .photo-caption {
   position: absolute; 
   bottom: 0; left: 0; width: 100%;
   padding: 24px;
-  transform: translateY(10px); /* Levemente deslocado */
+  transform: translateY(10px); 
   opacity: 0;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   display: flex; justify-content: space-between; align-items: flex-end;
@@ -220,7 +204,6 @@
   transform: rotate(-10deg);
 }
 
-/* --- ANIMAÇÕES DE ENTRADA --- */
 .fade-up { opacity: 0; animation: fadeUpAnim 1s forwards cubic-bezier(0.25, 0.8, 0.25, 1); }
 .delay-100 { animation-delay: 0.15s; }
 .delay-200 { animation-delay: 0.3s; }
@@ -230,25 +213,19 @@
   to { opacity: 1; transform: translateY(0); } 
 }
 
-/* =========================================
-   RESPONSIVIDADE (MOBILE OPTIMIZED)
-   ========================================= */
 @media (max-width: 768px) {
   .gallery-header { margin-bottom: 50px; }
   
   .photo-masonry {
-    /* No mobile, usamos colunas menores */
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     grid-auto-rows: 200px;
     gap: 12px;
   }
 
-  /* Mantém um pouco da variedade de tamanhos, mas simplifica */
   .photo-card.big { grid-column: span 2; grid-row: span 2; }
   .photo-card.wide { grid-column: span 2; grid-row: span 1; }
   .photo-card.tall { grid-column: span 1; grid-row: span 2; }
   
-  /* Legenda sempre visível no mobile (opcional, ou apenas sutil) */
   .photo-caption {
     opacity: 1;
     transform: translateY(0);
@@ -257,9 +234,8 @@
   }
   
   .photo-caption p { font-size: 0.8rem; }
-  .sticker-icon { display: none; } /* Remove ícone para limpar visual */
+  .sticker-icon { display: none; } 
   
-  /* Remove efeitos de hover pesados */
   .glass-polaroid:hover { transform: none; box-shadow: none; }
-  .glass-polaroid:active { transform: scale(0.98); } /* Feedback de toque */
+  .glass-polaroid:active { transform: scale(0.98); } 
 }

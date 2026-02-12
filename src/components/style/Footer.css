@@ -1,48 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700&family=Syne:wght@700;800&display=swap');
 
-
 .footer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  height: 300px;
+  gap: 25px; 
+  padding: 60px 20px 40px;
   text-align: center;
-  background-color: #02000a;
+  
+  background-color: #02000a; 
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow: hidden;
+}
+
+.footer-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #8b5cf6, transparent); 
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.6);
 }
 
 .brand {
-  font-family: 'Arial', sans-serif;
-  font-weight: 800;
-  font-size: 1rem;
-  text-transform: uppercase;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.6;
+  max-width: 600px;
   letter-spacing: -0.5px;
+}
+
+.brand span {
+  display: block;
+  margin-top: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #a054d6; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 1;
 }
 
 .links {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  flex-wrap: wrap; 
+  justify-content: center;
 }
 
 .links a {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   font-size: 0.9rem;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
 }
 
 .links a:hover {
-  color: #a054d6;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(160, 84, 214, 0.6);
+  transform: translateY(-2px);
+}
+
+.links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: #a054d6;
+  transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+  width: 100%;
 }
 
 .copyright {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.4);
-  margin-top: 10px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 15px;
+  letter-spacing: 0.5px;
 }
 
-span {
-  color: #a054d6;
-  opacity: 0.8;
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 50px 20px 80px; 
+  }
+  
+  .brand {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  .links {
+    gap: 20px;
+  }
 }

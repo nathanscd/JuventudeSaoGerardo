@@ -23,10 +23,10 @@ const Events: React.FC = () => {
             <span className="profile-emoji">🔥</span>
           </div>
           <h1 className="profile-title">
-            AGENDA <span className="stroke-text">& LINKS</span>
+            EVENTOS <span className="stroke-text">& LINKS</span>
           </h1>
           <p className="profile-bio">
-            Fique por dentro de tudo que rola no <span className="highlight">Jovens São Gerardo</span>. 
+            Fique por dentro de tudo que rola no <span className="highlight">Boa Nova</span>. 
             Inscrições, eventos e materiais para seu crescimento espiritual.
           </p>
         </section>

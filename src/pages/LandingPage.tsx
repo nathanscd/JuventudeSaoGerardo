@@ -21,7 +21,7 @@ const LandingPage: React.FC = () => {
       <section className="hero-section">
         <div className="hero-content">
           <div className="badge-glass">Juventude São Gerardo • Desde 2024</div>
-          <h1 className="hero-title">SOMOS A GERAÇÃO DO <br /><span className="gradient-text">AVIVAMENTO</span></h1>
+          <h1 className="hero-title">SOMOS A  DO <br /><span className="gradient-text">AVIVAMENTO</span></h1>
           <p className="hero-description">Um movimento de jovens apaixonados por Jesus, vivendo a santidade. O fogo do Espírito Santo queima aqui.</p>
 
           <div className="hero-actions">

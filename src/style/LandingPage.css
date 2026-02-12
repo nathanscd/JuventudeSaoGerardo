@@ -389,9 +389,9 @@ body {
   transform: scale(1.05);
 }
 
-.worship-bg { background-image: url('Louvor.jpeg'); }
-.word-bg { background-image: url('Pregação.jpeg'); }
-.community-bg { background-image: url('Comunhão.jpeg') ; }
+.worship-bg { background-image: url('/Louvor.jpeg'); }
+.word-bg { background-image: url('/Pregação.jpeg'); }
+.community-bg { background-image: url('/Comunhão.jpeg') ; }
 
 .card-content {
   position: relative;

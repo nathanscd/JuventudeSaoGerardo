@@ -1,5 +1,5 @@
 import React from 'react';
-import './NoiseGrain.css';
+import './style/NoiseGrain.css';
 
 const NoiseGrain: React.FC = () => {
   return (

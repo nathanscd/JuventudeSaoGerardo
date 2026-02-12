@@ -1,6 +1,7 @@
 import React, { useState } from 'react'; 
 import Header from '../components/Header'; 
-import '../Standard.css'; 
+import '../style/Standard.css'; 
+import Footer from '../components/Footer';
 
 const Contact: React.FC = () => {
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
@@ -21,8 +22,6 @@ const Contact: React.FC = () => {
       </div>
 
       <main className="contact-container">
-        
-        {/* Lado Esquerdo: Infos & Vibe */}
         <section className="contact-info fade-up">
           <div className="info-header">
             <span className="badge-glass">FALE CONOSCO</span>
@@ -50,7 +49,6 @@ const Contact: React.FC = () => {
           </div>
         </section>
 
-        {/* Lado Direito: Formulário Glass */}
         <section className="contact-form-section fade-up delay-100">
           <div className="glass-form-card">
             {formStatus === 'sent' ? (
@@ -101,9 +99,7 @@ const Contact: React.FC = () => {
           </div>
         </section>
       </main>
-      <footer className="simple-footer">
-        <p>© 2026 Jovens São Gerardo. Feito com fé e código.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

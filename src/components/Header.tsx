@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from "react-router-dom";
-import './Header.css';
+import './style/Header.css';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -8,84 +8,56 @@ const Header: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }, [menuOpen]);
-
-  useEffect(() => {
     setMenuOpen(false);
   }, [location]);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : 'unset';
+  }, [menuOpen]);
 
   return (
     <>
-      <nav className={`nav-container ${scrolled ? 'scrolled' : ''}`}>
-        <div className="nav-content">
-          
-          <Link to="/" className="logo-area" onClick={closeMenu}>
-            <span className="logo-symbol">✝</span>
-            <div className="logo-text">
-              <span>JOVENS</span>
-              <span className="highlight">SÃO GERARDO</span>
-            </div>
-          </Link>
+      <nav className={`header ${scrolled ? 'scrolled' : ''}`}>
+        <Link to="/" className='name' onClick={() => setMenuOpen(false)}>
+          <h1 className="Title"><span>grupo de oração</span><br/>Boa Nova</h1>
+        </Link>
 
-          <div 
-            className={`mobile-toggle ${menuOpen ? 'active' : ''}`} 
-            onClick={toggleMenu}
-          >
-            <div className="bar"></div>
-            <div className="bar short"></div>
-            <div className="bar"></div>
-          </div>
+        <div className="desktop-menu">
+          <Link to='/' className="nav-link" data-replace="Início"><span>Início</span></Link>
+          <Link to='/about' className="nav-link" data-replace="Sobre"><span>Sobre</span></Link>
+          <Link to='/events' className="nav-link" data-replace="Eventos"><span>Eventos</span></Link>
+          <Link to='/gallery' className="nav-link" data-replace="Fotos"><span>Fotos</span></Link>
+          <Link to='/contact' className="nav-link" data-replace="Contato"><span>Contato</span></Link>
+        </div>
 
-          <div className={`nav-menu ${menuOpen ? 'active' : ''}`}>
-            <Link to="/" className="nav-link" onClick={closeMenu}>Início</Link>
-            <Link to="/eventos" className="nav-link" onClick={closeMenu}>Eventos</Link>
-            <Link to="/fotos" className="nav-link" onClick={closeMenu}>Fotos</Link> 
-            <Link to="/contato" className="nav-link" onClick={closeMenu}>Contato</Link>
-            
-            <Link to="/join">
-              <button className="btn-header" onClick={closeMenu}>
-                PARTICIPAR DO GRUPO
-              </button>
-            </Link>
-          </div>
+        <div className={`mobile-toggle ${menuOpen ? 'active' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
+          <div className="bar"></div>
+          <div className="bar short"></div>
+          <div className="bar"></div>
         </div>
       </nav>
 
-      {menuOpen && (
-        <div 
-          className="menu-overlay"
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100vh',
-            background: 'rgba(0,0,0,0.6)',
-            zIndex: 999, 
-            backdropFilter: 'blur(4px)'
-          }}
-          onClick={closeMenu}
-        />
-      )}
+      <div className={`mobile-overlay ${menuOpen ? 'open' : ''}`}>
+        <div className="mobile-links-container">
+          <Link to='/' onClick={() => setMenuOpen(false)}>Início</Link>
+          <Link to='/about' onClick={() => setMenuOpen(false)}>Quem Somos</Link>
+          <Link to='/events' onClick={() => setMenuOpen(false)}>Eventos</Link>
+          <Link to='/gallery' onClick={() => setMenuOpen(false)}>Fotos</Link>
+          <Link to='/contact' onClick={() => setMenuOpen(false)}>Contato</Link>
+          
+          <Link to='/join' className="mobile-btn-join" onClick={() => setMenuOpen(false)}>
+            PARTICIPAR
+          </Link>
+        </div>
+      </div>
     </>
   );
 };

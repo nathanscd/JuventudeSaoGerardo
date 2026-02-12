@@ -1,6 +1,7 @@
 import React from 'react'; 
 import Header from '../components/Header';
-import '../Gallery.css';
+import '../style/Gallery.css';
+import Footer from '../components/Footer';
 
 import { galleryPhotos } from '../data/photosData';
 import type { PhotoItem } from '../data/photosData'; 
@@ -66,6 +67,7 @@ const Gallery: React.FC = () => {
           ))}
         </section>
       </main>
+      <Footer />
     </div>
   );
 };

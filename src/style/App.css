@@ -1,0 +1,219 @@
+:root {
+  --bg-deep: #020617;
+  --primary-neon: #8b5cf6;
+  --secondary-neon: #ec4899;
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+
+  --header-height: 80px;
+  --mobile-header-height: 70px;
+  --container-width: 1200px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; 
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+html.lenis { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-scrolling iframe { pointer-events: none; }
+
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input, select, textarea {
+  font-size: 16px !important; 
+}
+
+.landing-wrapper, 
+.form-wrapper, 
+.contact-wrapper, 
+.events-wrapper, 
+.gallery-wrapper,
+.join-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .landing-wrapper, 
+  .form-wrapper, 
+  .contact-wrapper, 
+  .events-wrapper, 
+  .gallery-wrapper,
+  .join-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-title, .title-display, .invite-title {
+    font-size: 3.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .nav-content { padding: 0 20px; }
+  
+  .hero-title, .title-display, .invite-title {
+    font-size: 2.5rem !important;
+    line-height: 1.1;
+  }
+
+  .hero-description, .invite-subtitle {
+    font-size: 1rem !important;
+    padding: 0 10px;
+  }
+
+  .back-link {
+    top: 90px !important;
+    left: 20px !important;
+    padding: 8px 16px !important;
+    font-size: 0.8rem !important;
+    background: rgba(2, 6, 23, 0.8) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    z-index: 900;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    padding-top: 130px !important;
+    padding-bottom: 60px !important;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .hero-content {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .hero-visual { display: none; }
+
+  .bento-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 24px !important;
+  }
+
+  .featured-card, .secondary-card, .tertiary-card {
+    grid-column: span 1 !important;
+    grid-row: auto !important;
+    min-height: 260px;
+  }
+
+  .form-container {
+    padding: 30px 20px !important;
+    margin-top: 70px;
+    width: 100% !important;
+  }
+
+  .trip-selector, .row-split {
+    grid-template-columns: 1fr !important; 
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr !important;
+    padding-top: 110px !important;
+    gap: 50px !important;
+  }
+
+  .social-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .events-container {
+    padding-top: 110px !important;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .gallery-container {
+    padding-top: 110px !important;
+  }
+
+  .photo-masonry {
+    grid-template-columns: 1fr !important; 
+    gap: 24px !important;
+  }
+
+  .glass-polaroid {
+    transform: none !important; 
+  }
+
+  .photo-caption {
+    transform: translateY(0) !important; 
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding-bottom: 20px;
+  }
+
+  .invite-container {
+    padding-top: 120px !important;
+  }
+  
+  .ticket-section { max-width: 100%; }
+  .holographic-ticket { flex-direction: column; }
+  
+  .ticket-divider { 
+    width: 100%; height: 2px; 
+    background: repeating-linear-gradient(to right, rgba(255,255,255,0.2) 0, rgba(255,255,255,0.2) 10px, transparent 10px, transparent 20px); 
+  }
+  .ticket-divider::before { top: -11px; left: -11px; }
+  .ticket-divider::after { top: -11px; right: -11px; left: auto; }
+  
+  .ticket-right { 
+    width: 100%; 
+    flex-direction: row; 
+    padding: 20px; 
+    justify-content: space-between;
+  }
+  
+  .sideways { 
+    writing-mode: horizontal-tb; 
+    transform: none; 
+  }
+  
+  .barcode { height: 40px; width: 100px; }
+  
+  .fears-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 380px) {
+  .hero-title, .title-display, .invite-title {
+    font-size: 2rem !important;
+  }
+  
+  .badge-glass, .floating-badge {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+
+  .nav-link { font-size: 2rem !important; }
+}

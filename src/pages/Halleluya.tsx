@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import '../BusForm.css';
+import '../style/BusForm.css';
 import Header from '../components/Header';
 
 interface Passenger {
@@ -136,7 +136,7 @@ const BusForm: React.FC = () => {
     <div className="form-wrapper">
       <Header />
       
-      <Link to="/eventos" className="back-link">← Voltar para os Eventos</Link>
+      <Link to="/events" className="back-link">← Voltar para os Eventos</Link>
 
       <div className="background-shapes">
         <div className="shape shape-1"></div>
@@ -276,6 +276,7 @@ const BusForm: React.FC = () => {
           renderTickets()
         )}
       </div>
+
     </div>
   );
 };

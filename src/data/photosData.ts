@@ -1,6 +1,3 @@
-// Certifique-se que o caminho é: src/data/photosData.ts
-
-// O ERRO ESTAVA PROVAVELMENTE AQUI (Faltava o 'export' antes de interface)
 export interface PhotoItem {
   id: number;
   src: string;
@@ -23,5 +20,4 @@ export const galleryPhotos: PhotoItem[] = [
     alt: "Banda tocando",
     caption: "Ministério de Música entregando tudo.",
   },
-  // ... adicione as outras fotos aqui
 ];

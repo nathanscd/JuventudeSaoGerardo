@@ -1,13 +1,14 @@
 import React from 'react';
 import Header from '../components/Header'; 
 import { useNavigate } from 'react-router-dom'; 
-import '../Standard.css';
+import '../style/Standard.css';
+import Footer from '../components/Footer';
 
 const Events: React.FC = () => {
   const navigate = useNavigate();
 
   const handleHalleluyaClick = () => {
-    navigate('/halleluya-bus'); 
+    navigate('/halleluya'); 
   };
 
   return (
@@ -72,9 +73,7 @@ const Events: React.FC = () => {
 
       </main>
       
-      <footer className="simple-footer">
-        <p>© 2026 JSG • "Ser santo sem deixar de ser jovem"</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -4,8 +4,8 @@
   --bg-deep: #020617;
   --glass-surface: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --primary-neon: #8b5cf6; /* Roxo */
-  --secondary-neon: #ec4899; /* Rosa */
+  --primary-neon: #8b5cf6; 
+  --secondary-neon: #ec4899; 
   --text-main: #ffffff;
   --text-muted: #94a3b8;
 }
@@ -18,14 +18,13 @@ body {
 }
 
 .contact-wrapper {
-  min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-/* Background Effects */
 .noise-overlay {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -51,7 +50,6 @@ body {
   bottom: -100px; left: -100px; animation: pulseGlow 10s infinite alternate-reverse;
 }
 
-/* Layout Grid */
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -64,7 +62,6 @@ body {
   align-items: center;
 }
 
-/* Left Side: Info */
 .info-header { margin-bottom: 40px; }
 
 .badge-glass {
@@ -88,7 +85,6 @@ body {
   font-size: 1.1rem; color: var(--text-muted); line-height: 1.6; max-width: 450px;
 }
 
-/* Social Grid */
 .social-grid { display: flex; flex-direction: column; gap: 16px; }
 
 .social-card {
@@ -109,7 +105,6 @@ body {
 .social-card .arrow { opacity: 0.5; font-size: 1.2rem; transition: 0.3s; }
 .social-card:hover .arrow { opacity: 1; transform: translate(3px, -3px); color: var(--primary-neon); }
 
-/* Right Side: Form */
 .glass-form-card {
   background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
@@ -146,7 +141,6 @@ body {
   box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
 }
 
-/* Button */
 .btn-submit-glow {
   position: relative; width: 100%; padding: 16px;
   background: linear-gradient(135deg, var(--primary-neon), var(--secondary-neon));
@@ -165,7 +159,6 @@ body {
   animation: shine 3s infinite;
 }
 
-/* Success State */
 .success-state { text-align: center; padding: 40px 0; animation: fadeIn 0.5s; }
 .success-icon { font-size: 4rem; margin-bottom: 20px; }
 .success-state h2 { font-family: 'Syne', sans-serif; font-size: 2rem; margin-bottom: 10px; }
@@ -176,7 +169,6 @@ body {
 }
 .btn-reset:hover { border-color: white; background: rgba(255,255,255,0.1); }
 
-/* Animations */
 @keyframes pulseGlow {
   0% { transform: scale(1); opacity: 0.4; }
   100% { transform: scale(1.1); opacity: 0.6; }
@@ -194,7 +186,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .contact-container { grid-template-columns: 1fr; padding-top: 100px; gap: 40px; }
   .title-display { font-size: 2.5rem; }
@@ -212,7 +203,7 @@ body {
   --glass-surface: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.1);
   --primary-neon: #8b5cf6;
-  --accent-neon: #f43f5e; /* Rosa avermelhado para destaque */
+  --accent-neon: #f43f5e; 
   --text-main: #ffffff;
   --text-muted: #94a3b8;
 }
@@ -228,7 +219,6 @@ body {
   flex-direction: column;
 }
 
-/* Background Effects */
 .noise-overlay {
   position: fixed; top: 0; left: 0; width: 100%; height: 100%;
   pointer-events: none; z-index: 0; opacity: 0.04;
@@ -245,9 +235,8 @@ body {
   pointer-events: none;
 }
 
-/* Container */
 .events-container {
-  max-width: 600px; /* Largura focada (tipo Linktree) */
+  max-width: 600px;
   margin: 0 auto;
   padding: 120px 20px 60px;
   position: relative;
@@ -256,7 +245,6 @@ body {
   flex: 1;
 }
 
-/* Profile Section */
 .profile-section {
   text-align: center;
   margin-bottom: 50px;
@@ -298,7 +286,6 @@ body {
 
 .highlight { color: var(--primary-neon); font-weight: 700; }
 
-/* Links Grid */
 .links-grid {
   display: flex;
   flex-direction: column;
@@ -325,7 +312,6 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* Destaque Halleluya */
 .featured-event {
   background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(244, 63, 94, 0.1));
   border: 1px solid rgba(139, 92, 246, 0.3);
@@ -380,7 +366,6 @@ body {
   z-index: 1; opacity: 0.5;
 }
 
-/* Botões Simples (Glass Btn) */
 .glass-btn {
   display: flex; align-items: center; gap: 16px; padding: 18px 24px;
   font-weight: 600; font-size: 1.05rem;
@@ -396,7 +381,6 @@ body {
 .icon-box.spotify { color: #1db954; background: rgba(29, 185, 84, 0.1); }
 .icon-box.location { color: #3b82f6; background: rgba(59, 130, 246, 0.1); }
 
-/* Info Box */
 .info-box {
   background: rgba(0,0,0,0.2); border: 1px dashed var(--glass-border);
   text-align: center; cursor: default;
@@ -406,7 +390,6 @@ body {
 .info-box h3 { font-size: 0.9rem; color: var(--primary-neon); text-transform: uppercase; margin-bottom: 4px; letter-spacing: 1px; }
 .info-box p { font-size: 0.95rem; color: white; }
 
-/* Animations */
 .fade-in { opacity: 0; animation: fadeIn 0.8s forwards ease-out; }
 .fade-up { opacity: 0; animation: fadeUp 0.8s 0.2s forwards ease-out; }
 

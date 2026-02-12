@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from '../components/Header'; 
-import '../LandingPage.css';
+import Footer from '../components/Footer'; 
+import '../style/LandingPage.css';
 import { useNavigate } from 'react-router-dom';
+
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -9,8 +11,7 @@ const LandingPage: React.FC = () => {
   return (
     <div className="landing-wrapper">
       <Header />
-      
-
+    
       <div className="ambient-orbs">
         <div className="orb orb-1"></div>
         <div className="orb orb-2"></div>
@@ -19,30 +20,18 @@ const LandingPage: React.FC = () => {
 
       <section className="hero-section">
         <div className="hero-content">
-          <div className="badge-glass">
-            Juventude São Gerardo • Desde 2024
-          </div>
-          
-          <h1 className="hero-title">
-            SOMOS A GERAÇÃO DO <br />
-            <span className="gradient-text">AVIVAMENTO</span>
-          </h1>
-
-          <p className="hero-description">
-            Um movimento de jovens apaixonados por Jesus, vivendo a santidade. O fogo do Espírito Santo queima aqui.
-          </p>
+          <div className="badge-glass">Juventude São Gerardo • Desde 2024</div>
+          <h1 className="hero-title">SOMOS A GERAÇÃO DO <br /><span className="gradient-text">AVIVAMENTO</span></h1>
+          <p className="hero-description">Um movimento de jovens apaixonados por Jesus, vivendo a santidade. O fogo do Espírito Santo queima aqui.</p>
 
           <div className="hero-actions">
-            <button className="btn-glow" onClick={() => navigate('/join')}>
-              QUERO PARTICIPAR
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
+            <button className="btn-glow" onClick={() => navigate('/join')}>QUERO PARTICIPAR<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
             
             <div className="glass-widget">
-              <div className="widget-icon">🔥</div>
+              <div className="widget-icon">🗓️</div>
               <div className="widget-info">
                 <strong>Próximo Encontro</strong>
-                <span>Sábado às 16:30h</span>
+                <span>Domingo às 16:30h</span>
               </div>
             </div>
           </div>
@@ -60,8 +49,9 @@ const LandingPage: React.FC = () => {
 
       <div className="glass-marquee">
         <div className="track">
-          <span>WORSHIP • HOLINESS • FIRE • PRAYER • COMMUNITY • JESUS • </span>
-          <span>WORSHIP • HOLINESS • FIRE • PRAYER • COMMUNITY • JESUS • </span>
+          <span>LOUVOR • ADORAÇÃO • FOGO • PREGAÇÃO • VIDA COMUNITÁRIA • JESUS • </span>
+          <span>LOUVOR • ADORAÇÃO • FOGO • PREGAÇÃO • VIDA COMUNITÁRIA • JESUS • </span>
+          <span>LOUVOR • ADORAÇÃO • FOGO • PREGAÇÃO • VIDA COMUNITÁRIA • JESUS • </span>
         </div>
       </div>
 
@@ -102,9 +92,7 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      <footer className="simple-footer">
-        <p>© 2026 Jovens São Gerardo. Feito com fé e código.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

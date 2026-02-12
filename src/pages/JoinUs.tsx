@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
-import '../JoinUs.css';
+import '../style/JoinUs.css';
+import Footer from '../components/Footer';
 
 const JoinUs: React.FC = () => {
   return (
@@ -105,9 +106,7 @@ const JoinUs: React.FC = () => {
 
       </main>
 
-      <footer className="simple-footer">
-        <p>© 2026 Jovens São Gerardo. Feito com fé e código.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

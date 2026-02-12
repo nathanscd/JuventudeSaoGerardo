@@ -6,18 +6,44 @@ export interface PhotoItem {
   size?: 'wide' | 'tall' | 'big';
 }
 
+const sizePattern: ('wide' | 'tall' | 'big' | undefined)[] = [
+  'tall', undefined, 'wide', 'tall', undefined, 'big', undefined, 'wide', 'tall', undefined, 'wide'
+];
+
 export const galleryPhotos: PhotoItem[] = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&auto=format&fit=crop",
-    alt: "Grupo reunido",
-    caption: "Noite de Adoração • O céu desceu 🔥",
+    src: "/Gallery/foto-grupo-1.jpeg", 
+    alt: "Momento de Adoração",
+    caption: "O céu desceu neste lugar",
     size: 'big'
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop",
-    alt: "Banda tocando",
-    caption: "Ministério de Música entregando tudo.",
+    src: "/Gallery/foto-grupo%20(2).jpeg",
+    alt: "Louvor Intenso",
+    caption: "Entregando tudo a Deus",
+    size: 'tall'
   },
+  {
+    id: 3,
+    src: "/Gallery/foto-grupo%20(3).jpeg",
+    alt: "",
+    caption: "",
+    size: 'wide'
+  },
+
+  ...Array.from({ length: 57 }, (_, index) => {
+    const id = index + 4; 
+    
+    const size = sizePattern[id % sizePattern.length];
+
+    return {
+      id: id,
+      src: `/Gallery/foto-grupo%20(${id}).jpeg`, 
+      alt: "",
+      caption: "",
+      size: size
+    };
+  })
 ];

@@ -28,7 +28,7 @@ const LandingPage: React.FC = () => {
             <button className="btn-glow" onClick={() => navigate('/join')}>QUERO PARTICIPAR<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
             
             <div className="glass-widget">
-              <div className="widget-icon">🗓️</div>
+              <div className="widget-icon">🔥</div>
               <div className="widget-info">
                 <strong>Próximo Encontro</strong>
                 <span>Domingo às 16:30h</span>

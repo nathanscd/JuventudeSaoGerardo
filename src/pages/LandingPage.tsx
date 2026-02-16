@@ -12,7 +12,6 @@ const LandingPage: React.FC = () => {
       <Header />
       
       <div className="canvas-container">
-        <div className="noise-overlay"></div>
         <div className="gradient-sphere sphere-1"></div>
         <div className="gradient-sphere sphere-2"></div>
         <div className="mesh-grid"></div>
@@ -114,14 +113,14 @@ const LandingPage: React.FC = () => {
                   <div className="feature-row">
                     <span className="feature-icon">🙌</span>
                     <div className="feature-info">
-                      <h4>LOUVOR INTENSO</h4>
+                      <h4>ORAÇÃO VIVA</h4>
                       <p>Adoramos com toda a nossa força e vontade.</p>
                     </div>
                   </div>
                   <div className="feature-row">
                     <span className="feature-icon">📖</span>
                     <div className="feature-info">
-                      <h4>PALAVRA VIVA</h4>
+                      <h4>PALAVRA DIRECIONADA</h4>
                       <p>Pregações que direcionam para a vontade de Deus.</p>
                     </div>
                   </div>

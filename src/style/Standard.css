@@ -79,6 +79,7 @@ body {
 .gradient-text {
   background: linear-gradient(135deg, #fff, var(--primary-neon));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .description {
@@ -349,6 +350,7 @@ body {
   font-family: 'Oswald', sans-serif; font-size: 1.4rem; margin-bottom: 4px;
   background: linear-gradient(to right, #fff, #fca5a5);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .event-details p { font-size: 0.9rem; color: #cbd5e1; line-height: 1.3; }

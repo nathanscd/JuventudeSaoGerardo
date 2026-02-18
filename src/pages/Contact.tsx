@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="social-grid">
-            <a href="#" className="social-card instagram">
+            <a href="https://www.instagram.com/juventudesaogerardo/" target="_blank" rel="noopener noreferrer" className="social-card instagram">
               <div className="icon">📸</div>
               <span>@juventudesaogerardo</span>
               <div className="arrow">↗</div>

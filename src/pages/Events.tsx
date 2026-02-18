@@ -68,11 +68,8 @@ const Events: React.FC = () => {
             <h3>Próximo Grupo de Oração</h3>
             <p>Sábado às 16:30h • Tema: ""</p>
           </div>
-
         </section>
-
       </main>
-      
       <Footer />
     </div>
   );

@@ -53,8 +53,8 @@ body {
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  max-width: 1200px;
+  gap: 150px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 140px 24px 60px;
   position: relative;

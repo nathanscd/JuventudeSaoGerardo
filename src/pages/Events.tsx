@@ -54,12 +54,12 @@ const Events: React.FC = () => {
             <span>Nosso Instagram</span>
           </a>
 
-          <a href="#" className="link-card glass-btn">
+          <a href="https://open.spotify.com/playlist/2wvrQJ7R5w2bP2M9F2NCe5?si=oO5jFYflSNu7eFUrFnyGJg" target="_blank" rel="noopener noreferrer" className="link-card glass-btn">
             <div className="icon-box spotify">🎧</div>
             <span>Playlist de Louvor</span>
           </a>
 
-          <a href="#" className="link-card glass-btn">
+          <a href="https://www.google.com/maps/dir//Igreja+Matriz+de+S%C3%A3o+Gerardo+Majella,+Av.+Bezerra+de+Menezes,+1256+-+S%C3%A3o+Gerardo,+Fortaleza+-+CE,+60325-005/@-4.0177657,-38.5796601,10z/data=!4m8!4m7!1m0!1m5!1m1!1s0x7c7497635165ff5:0x4d166ff3c8095ff4!2m2!1d-38.5565806!2d-3.7335897?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="link-card glass-btn">
             <div className="icon-box location">📍</div>
             <span>Como Chegar na Igreja</span>
           </a>

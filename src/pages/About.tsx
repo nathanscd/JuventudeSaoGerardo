@@ -32,7 +32,6 @@ const About: React.FC = () => {
       <Header />
       
       <div className="canvas-container">
-        <div className="noise-overlay"></div>
         <div className="mesh-grid"></div>
       </div>
 

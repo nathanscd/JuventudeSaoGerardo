@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header'; 
 import { useNavigate } from 'react-router-dom'; 
-import '../style/Standard.css';
+import '../style/Events.css';
 import Footer from '../components/Footer';
 
 const Events: React.FC = () => {

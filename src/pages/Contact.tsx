@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; 
 import Header from '../components/Header'; 
-import '../style/Standard.css'; 
+import '../style/Contact.css'; 
 import Footer from '../components/Footer';
 
 const Contact: React.FC = () => {

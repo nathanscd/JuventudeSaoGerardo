@@ -1,0 +1,47 @@
+@import url('[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&family=Syne:wght@700;800&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&family=Syne:wght@700;800&display=swap)');
+
+@font-face{
+  font-family: 'Higuen';
+  src: url('Fonts/Higuen Serif.otf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Lora';
+  src: url('Fonts/Lora-Regular.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Raleway';
+  src: url('Fonts/Raleway-Regular.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Raleway Bold';
+  src: url('Fonts/Raleway-ExtraBold.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Raleway Black';
+  src: url('Fonts/Raleway-Black.ttf') format('truetype');
+}
+
+:root {
+  --color-bg: #020617;
+  --color-text: #f5f5f5;
+  --color-text-muted: #94a3b8;
+  --color-accent: #42329c;
+  --color-accent-secondary: #36a0c3;
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --font-main: 'Lora', sans-serif;
+  --font-heading: 'Raleway Black', sans-serif;
+  --font-desc: 'Raleway', sans-serif;
+  --transition-smooth: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  --bg-deep: #020617;
+  --glass-surface: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --primary-neon: #42329c;
+  --accent-neon: #bc2317; 
+  --text-main: #f5f5f5;
+  --text-muted: #94a3b8;
+}

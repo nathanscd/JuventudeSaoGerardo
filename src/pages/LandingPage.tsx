@@ -18,19 +18,9 @@ const LandingPage: React.FC = () => {
       </div>
 
       <main className="main-content">
-        
         <section className='welcome-section'>
-          <div className="welcome-overlay"></div>
-          
-          <div className='unknown-banner'>
-            <img src="/LogoCompleta.svg" alt="BoaNova" />
-          </div>
-
-          <div className="scroll-indicator">
-            <div className="mouse"></div>
-          </div>
         </section>
-
+        
         <section className="hero-section">
           <div className="hero-content">
             <div className="badge-glass">

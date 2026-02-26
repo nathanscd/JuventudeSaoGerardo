@@ -36,6 +36,8 @@ const About: React.FC = () => {
       </div>
 
       <main className="main-content">
+        <section className='about-banner'></section>
+
         <section className="about-hero">
           <div className="about-orb orb-purple"></div>
           <div className="about-orb orb-magenta"></div>
@@ -77,35 +79,9 @@ const About: React.FC = () => {
           </div>
 
           <div className="bento-grid">
-            <div className="glass-card featured-card reveal">
-              <div className="card-bg-image worship-bg"></div>
-              <div className="bento-overlay"></div>
-              <div className="card-content">
-                <div className="card-icon">🎸</div>
-                <h3>Louvor Profundo</h3>
-                <p>Música que conecta o céu e a terra. Expressamos nossa adoração com toda força e alegria própria da juventude.</p>
-              </div>
-            </div>
-
-            <div className="glass-card secondary-card reveal delay-1">
-              <div className="card-bg-image word-bg"></div>
-              <div className="bento-overlay"></div>
-              <div className="card-content">
-                <div className="card-icon">📖</div>
-                <h3>Pregação</h3>
-                <p>A verdade que transforma, liberta e nos direciona a uma fé madura.</p>
-              </div>
-            </div>
-
-            <div className="glass-card tertiary-card reveal delay-2">
-              <div className="card-bg-image community-bg"></div>
-              <div className="bento-overlay"></div>
-              <div className="card-content">
-                <div className="card-icon">❤️</div>
-                <h3>Comunhão</h3>
-                <p>Amigos que te levam para Deus. Ninguém caminha sozinho.</p>
-              </div>
-            </div>
+            <img src="/Pilar1.png" alt="Pilar 1" />
+            <img src="/Pilar2.png" alt="Pilar 2" id="middle" />
+            <img src="/Pilar3.png" alt="Pilar 3" />
           </div>
         </section>
 

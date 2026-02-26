@@ -16,8 +16,9 @@ const Events: React.FC = () => {
       <Header />
 
       <div className="spotlight-orb"></div>
-
+      <section className="events-banner"></section>
       <main className="events-container">
+
         <section className="profile-section fade-in">
           <div className="profile-image">
             <span className="profile-emoji">🔥</span>

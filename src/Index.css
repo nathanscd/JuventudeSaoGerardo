@@ -2,27 +2,27 @@
 
 @font-face{
   font-family: 'Higuen';
-  src: url('Fonts/Higuen.otf') format('truetype');
+  src: url('/public/Fonts/Higuen.otf') format('truetype');
 }
 
 @font-face{
   font-family: 'Lora';
-  src: url('Fonts/Lora-Regular.ttf') format('truetype');
+  src: url('/public/Fonts/Lora-Regular.ttf') format('truetype');
 }
 
 @font-face{
   font-family: 'Raleway';
-  src: url('Fonts/Raleway-Regular.ttf') format('truetype');
+  src: url('/public/Fonts/Raleway-Regular.ttf') format('truetype');
 }
 
 @font-face{
   font-family: 'Raleway Bold';
-  src: url('Fonts/Raleway-ExtraBold.ttf') format('truetype');
+  src: url('/public/Fonts/Raleway-ExtraBold.ttf') format('truetype');
 }
 
 @font-face{
   font-family: 'Raleway Black';
-  src: url('Fonts/Raleway-Black.ttf') format('truetype');
+  src: url('/public/Fonts/Raleway-Black.ttf') format('truetype');
 }
 
 :root {

@@ -8,6 +8,19 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.about-banner{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('/AboutBanner.png') no-repeat center right;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 1;
+}
+
 .canvas-container {
   position: fixed;
   top: 0; 
@@ -227,10 +240,60 @@
 }
 
 .bento-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 360px 360px;
-  gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+.bento-grid img {
+  width: 20vw;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  filter: brightness(0.8) contrast(1.1) grayscale(1);
+  margin-top: 5vh;
+}
+
+#middle {
+  width: 25vw;
+  transform: translateY(-50px);
+  z-index: 2;
+}
+
+.bento-grid:hover #middle {
+  transform: translateY(-50px);
+}
+
+.bento-grid img:hover {
+  width: 22vw;
+  filter: brightness(1.1) blur(0) contrast(1.2) grayscale(0);
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 30px 60px rgba(160, 84, 214, 0.5);
+  z-index: 10;
+}
+
+.bento-grid img#middle:hover {
+  width: 27vw;
+  transform: translateY(-30px) scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .bento-grid { 
+    flex-direction: column;
+    gap: 24px; 
+  }
+  
+  .bento-grid img, #middle {
+    width: 80vw;
+    transform: translateY(0);
+  }
+
+  .bento-grid img#middle:hover, .bento-grid img:hover {
+    width: 85vw;
+    transform: scale(1.02) translateY(-10px);
+  }
 }
 
 .glass-card {
@@ -393,6 +456,7 @@
   justify-content: center;
   position: relative; 
   overflow: hidden;
+  background-color: var(--color-accent);
 }
 
 .about-quote-container {
@@ -404,7 +468,7 @@
 .quote-mark {
   font-family: serif; 
   font-size: 10rem; 
-  color: rgba(160, 84, 214, 0.2);
+  color: rgba(255, 255, 255, 0.5);
   line-height: 0; 
   position: absolute; 
   top: 40px; 
@@ -424,7 +488,7 @@
 
 .about-quote-container cite {
   font-size: 1.1rem; 
-  color: var(--color-accent); 
+  color: var(--color-text); 
   font-weight: 700;
   text-transform: uppercase; 
   letter-spacing: 3px; 
@@ -437,8 +501,9 @@
   justify-content: space-between; 
   gap: 80px;
   padding: 80px 5vw 140px; 
-  max-width: 1300px; 
-  margin: 0 auto;
+  padding: 15vh 25vw;
+  margin: 0 0 5vw 0;
+  background-color: black;
 }
 
 .history-text-content { 

@@ -253,7 +253,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  filter: brightness(0.8) contrast(1.1) grayscale(1);
+  filter: brightness(0.8) contrast(1.1);
   margin-top: 5vh;
 }
 
@@ -269,7 +269,7 @@
 
 .bento-grid img:hover {
   width: 22vw;
-  filter: brightness(1.1) blur(0) contrast(1.2) grayscale(0);
+  filter: brightness(1.1) blur(0) contrast(1.2);
   transform: translateY(-15px) scale(1.05);
   box-shadow: 0 30px 60px rgba(160, 84, 214, 0.5);
   z-index: 10;

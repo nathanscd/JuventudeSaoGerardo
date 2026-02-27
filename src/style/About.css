@@ -136,6 +136,7 @@
 .about-highlight {
   background: linear-gradient(135deg, #fff 20%, var(--color-accent) 100%);
   -webkit-background-clip: text; 
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -438,6 +439,7 @@
   padding: 2px;
   background: linear-gradient(135deg, transparent 40%, rgba(160, 84, 214, 0.4), transparent 60%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor; 
   mask-composite: exclude;
   opacity: 0; 

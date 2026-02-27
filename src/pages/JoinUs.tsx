@@ -7,13 +7,20 @@ const JoinUs: React.FC = () => {
   return (
     <div className="join-wrapper">
       <Header />
-      <div className="spotlight-top"></div>
+
+      <section className="join-banner"></section>
+      
+      <div className="canvas-container">
+        <div className="gradient-sphere sphere-1"></div>
+        <div className="gradient-sphere sphere-2"></div>
+        <div className="mesh-grid"></div>
+      </div>
 
       <main className="invite-container">
         
         <section className="invite-hero fade-up">
           <div className="floating-badge">
-            🚫 SEM INSCRIÇÃO • 🚫 SEM TAXAS
+            <span className="live-dot"></span> SEM INSCRIÇÃO • SEM TAXAS
           </div>
           
           <h1 className="invite-title">
@@ -30,9 +37,12 @@ const JoinUs: React.FC = () => {
 
         <section className="ticket-section fade-up delay-100">
           <div className="holographic-ticket">
+            <div className="ticket-glow"></div>
+            
             <div className="ticket-left">
-              <span className="ticket-label">CONVITE VIP</span>
+              <span className="ticket-label">CONVITE VIP • ENTRADA LIVRE</span>
               <h2>VOCÊ + DEUS</h2>
+              
               <div className="ticket-info">
                 <div className="info-item">
                   <span className="icon">📍</span>
@@ -50,33 +60,43 @@ const JoinUs: React.FC = () => {
                 </div>
               </div>
             </div>
+            
             <div className="ticket-divider"></div>
+            
             <div className="ticket-right">
-              <span className="sideways">ENTRADA LIVRE</span>
+              <span className="sideways">BOA NOVA</span>
               <div className="barcode"></div>
               <span className="ticket-id">SÓ VEM</span>
             </div>
-            <div className="ticket-glow"></div>
           </div>
         </section>
 
         <section className="fears-grid fade-up delay-200">
           <div className="fear-card">
-            <div className="emoji">🥺</div>
-            <h3>"Tenho vergonha de ir sozinho"</h3>
-            <p>Relaxa! Metade da galera chegou sozinha e hoje somos família. Temos uma equipe só pra te receber no portão.</p>
+            <div className="card-bg-effect"></div>
+            <div className="card-content-inner">
+              <div className="emoji">🥺</div>
+              <h3>"Tenho vergonha de ir sozinho"</h3>
+              <p>Relaxa! Metade da galera chegou sozinha e hoje somos família. Temos uma equipe só pra te receber no portão.</p>
+            </div>
           </div>
 
           <div className="fear-card">
-            <div className="emoji">👕</div>
-            <h3>"Com que roupa eu vou?"</h3>
-            <p>Com a que você se sentir bem. Do chinelo ao tênis de marca, o que importa é o seu coração.</p>
+            <div className="card-bg-effect"></div>
+            <div className="card-content-inner">
+              <div className="emoji">👕</div>
+              <h3>"Com que roupa eu vou?"</h3>
+              <p>Com a que você se sentir bem. Do chinelo ao tênis de marca, o que importa é o seu coração.</p>
+            </div>
           </div>
 
           <div className="fear-card">
-            <div className="emoji">🕊️</div>
-            <h3>"Não sei rezar direito"</h3>
-            <p>Ninguém sabe. A gente aprende junto. O Espírito Santo traduz até o silêncio.</p>
+            <div className="card-bg-effect"></div>
+            <div className="card-content-inner">
+              <div className="emoji">🕊️</div>
+              <h3>"Não sei rezar direito"</h3>
+              <p>Ninguém sabe. A gente aprende junto. O Espírito Santo traduz até o silêncio.</p>
+            </div>
           </div>
         </section>
 
@@ -100,7 +120,6 @@ const JoinUs: React.FC = () => {
                 </button>
               </div>
             </div>
-            <div className="map-visual-bg"></div>
           </div>
         </section>
 

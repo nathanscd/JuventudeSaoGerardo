@@ -18,8 +18,7 @@ const LandingPage: React.FC = () => {
       </div>
 
       <main className="main-content">
-        <section className='welcome-section'>
-        </section>
+        <section className='banner' id='welcome'></section>
         
         <section className="hero-section">
           <div className="hero-content">

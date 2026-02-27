@@ -70,19 +70,6 @@ body {
   100% { transform: translate(40px, 40px) scale(1.1); }
 }
 
-.welcome-section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: url('/Welcome.png') no-repeat center center;
-  background-size: cover;
-  overflow: hidden;
-  z-index: 1;
-}
-
 .hero-section {
   display: flex;
   align-items: center;

@@ -36,7 +36,7 @@ const About: React.FC = () => {
       </div>
 
       <main className="main-content">
-        <section className='about-banner'></section>
+        <section className='banner' id='about'></section>
 
         <section className="about-hero">
           <div className="about-orb orb-purple"></div>

@@ -16,7 +16,7 @@ const Events: React.FC = () => {
       <Header />
 
       <div className="spotlight-orb"></div>
-      <section className="events-banner"></section>
+      <section className="banner" id='events'></section>
       <main className="events-container">
 
         <section className="profile-section fade-in">

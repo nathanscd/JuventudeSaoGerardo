@@ -8,7 +8,7 @@ const JoinUs: React.FC = () => {
     <div className="join-wrapper">
       <Header />
 
-      <section className="join-banner"></section>
+      <section className="banner" id='join'></section>
       
       <div className="canvas-container">
         <div className="gradient-sphere sphere-1"></div>

@@ -537,7 +537,8 @@ body {
 .cta-sub {
   font-family: var(--font-main);
   font-style: italic;
-  color: var(--color-text-muted);
+  color: white;
+  opacity: 0.8;
   margin-bottom: 50px;
   font-size: 1.1rem;
 }

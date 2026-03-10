@@ -440,7 +440,7 @@ body {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background: url('/public/backgrounds/RB Gradient Background 022.jpg') no-repeat center center;
+  background: url('/backgrounds/RB Gradient Background 022.jpg') no-repeat center center;
   z-index: 2;
 }
 
@@ -503,7 +503,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
-  background: url('public/backgrounds/RB Gradient Background 022.jpg') no-repeat center center;
+  background: url('/backgrounds/RB Gradient Background 022.jpg') no-repeat center center;
   background-size: cover;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 40px;

@@ -11,6 +11,11 @@
 }
 
 @font-face{
+  font-family: 'Artis';
+  src: url('/Fonts/Artis-Swing Extralight.otf') format('truetype');
+}
+
+@font-face{
   font-family: 'Raleway';
   src: url('/Fonts/Raleway-Regular.ttf') format('truetype');
 }

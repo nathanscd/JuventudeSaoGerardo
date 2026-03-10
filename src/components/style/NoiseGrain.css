@@ -15,7 +15,8 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background-image: url("https://img.freepik.com/free-photo/dark-stone-desk-texture-with-concrete-background-high-resolution-top-view-table-with-copy-space-idea-advertising-banner-product-article_166373-2662.jpg?semt=ais_hybrid&w=740&q=80");
+  background-image: url("/textures/094.jpg");
+  background-size: cover;
   background-blend-mode: multiply;
   opacity: 0.05; 
 }

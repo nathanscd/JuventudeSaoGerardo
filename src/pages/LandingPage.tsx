@@ -10,20 +10,14 @@ const LandingPage: React.FC = () => {
   return (
     <div className="landing-wrapper">
       <Header />
-      
-      <div className="canvas-container">
-        <div className="gradient-sphere sphere-1"></div>
-        <div className="gradient-sphere sphere-2"></div>
-        <div className="mesh-grid"></div>
-      </div>
 
       <main className="main-content">
         <section className='banner' id='welcome'></section>
         
         <section className="hero-section">
           <div className="hero-content">
-            <div className="badge-glass">
-              <span className="live-dot"></span> Boa Nova • Desde 2024
+            <div className="badge">
+              <img src="/StickerLogo.png" alt="Sticker" />
             </div>
             
             <h1 className="hero-title">
@@ -129,9 +123,9 @@ const LandingPage: React.FC = () => {
                     <img src="/Louvor.jpeg" alt="Comunidade" />
                     <div className="image-overlay"></div>
                   </div>
-                  <div className="floating-tag">
-                    <span className="tag-icon">⚓</span> VEM E VÊ
-                  </div>
+                </div>
+                <div className="floating-tag">
+                  VEM E VÊ
                 </div>
               </div>
             </div>
@@ -156,7 +150,7 @@ const LandingPage: React.FC = () => {
           <div className="cta-card">
             <div className="cta-bg-glow"></div>
             <div className="cta-content">
-              <h2 className="cta-heading">NÃO TENHAIS MEDO <br />DE SER <span className="highlight">SANTOS</span></h2>
+              <h2 className="cta-heading">NÃO TENHAIS MEDO <br />DE SER SANTOS</h2>
               <p className="cta-sub">— São João Paulo II</p>
               <button className="magnetic-btn" onClick={() => navigate('/join')}>
                 QUERO ME UNIR AO GRUPO

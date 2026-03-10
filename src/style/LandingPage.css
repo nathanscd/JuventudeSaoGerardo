@@ -19,57 +19,6 @@ body {
   overflow-x: hidden;
 }
 
-.canvas-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-  background: radial-gradient(circle at 50% 0%, #0a0a0a 0%, var(--color-bg) 100%);
-}
-
-.gradient-sphere {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.15;
-}
-
-.sphere-1 {
-  width: 50vw;
-  height: 50vw;
-  background: var(--secondary-neon);
-  top: -20%;
-  right: -10%;
-  animation: floatOrb 18s infinite alternate ease-in-out;
-}
-
-.sphere-2 {
-  width: 60vw;
-  height: 60vw;
-  background: var(--primary-neon);
-  bottom: -20%;
-  left: -20%;
-  animation: floatOrb 22s infinite alternate-reverse ease-in-out;
-}
-
-.mesh-grid {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
-  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-}
-
-@keyframes floatOrb {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(40px, 40px) scale(1.1); }
-}
-
 .hero-section {
   display: flex;
   align-items: center;
@@ -81,6 +30,13 @@ body {
   position: relative;
   z-index: 2;
   min-height: 90vh;
+  background: url('/backgrounds/RB Gradient Background 022.png') no-repeat center center;
+  background-size: cover;
+}
+
+.main-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content {
@@ -88,36 +44,9 @@ body {
   max-width: 700px;
 }
 
-.badge-glass {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 100px;
-  font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 32px;
-  backdrop-filter: blur(20px);
-}
-
-.live-dot {
-  width: 8px;
-  height: 8px;
-  background: #ff3333;
-  border-radius: 50%;
-  box-shadow: 0 0 15px #ff3333;
-  animation: pulseLive 2s infinite;
-}
-
-@keyframes pulseLive {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 51, 51, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255, 51, 51, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 51, 51, 0); }
+.badge img {
+  width: 3vw;
+  margin-bottom: 2vh;
 }
 
 .hero-title {
@@ -160,7 +89,7 @@ body {
   background: var(--color-text);
   color: var(--color-bg);
   border: none;
-  border-radius: 100px;
+  border-radius: 10px;
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 0.9rem;
@@ -171,9 +100,9 @@ body {
 
 .btn-glow:hover {
   transform: translateY(-2px);
-  background: var(--color-accent);
+  background: #D91303;
   color: #fff;
-  box-shadow: 0 10px 30px rgba(255, 0, 234, 0.3);
+  box-shadow: 0 10px 30px #2f0300;
 }
 
 .glass-widget {
@@ -183,7 +112,7 @@ body {
   padding: 14px 24px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 100px;
+  border-radius: 10px;
   backdrop-filter: blur(20px);
 }
 
@@ -219,7 +148,7 @@ body {
 }
 
 .glass-card-floating {
-  background: var(--secondary-neon);
+  background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -242,7 +171,7 @@ body {
   transform: scale(0.9);
   animation: floatCard 10s infinite alternate-reverse ease-in-out;
   z-index: 1;
-  background: var(--primary-neon);
+  
 }
 
 @keyframes floatCard {
@@ -373,7 +302,7 @@ body {
   font-family: var(--font-main);
   font-style: italic;
   font-weight: 300;
-  color: var(--color-text-muted);
+  color: #D91303;
 }
 
 .section-text {
@@ -398,7 +327,7 @@ body {
   padding: 20px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 24px;
+  border-radius: 10px;
   transition: all 0.3s ease;
 }
 
@@ -474,7 +403,7 @@ body {
 
 .floating-tag {
   position: absolute;
-  bottom: -20px;
+  bottom: -50px;
   right: -20px;
   background: var(--color-text);
   color: var(--color-bg);
@@ -482,12 +411,24 @@ body {
   font-weight: 900;
   font-size: 1rem;
   padding: 16px 32px;
-  border-radius: 100px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
+  cursor: pointer;
   gap: 12px;
   letter-spacing: 2px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+  animation: floatTag 6s infinite ease-in-out;
+}
+
+.floating-tag:hover{
+  scale: 1.1;
+}
+
+@keyframes floatTag {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.1) translateY(-15px); }
 }
 
 .monument-viewport {
@@ -499,7 +440,7 @@ body {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background-color: var(--primary-neon);
+  background: url('/public/backgrounds/RB Gradient Background 022.jpg') no-repeat center center;
   z-index: 2;
 }
 
@@ -562,8 +503,9 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
-  background-color: var(--accent-neon);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: url('public/backgrounds/RB Gradient Background 022.jpg') no-repeat center center;
+  background-size: cover;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 40px;
   padding: 100px 40px;
   position: relative;
@@ -592,10 +534,6 @@ body {
   line-height: 1;
 }
 
-.highlight {
-  color: var(--color-accent);
-}
-
 .cta-sub {
   font-family: var(--font-main);
   font-style: italic;
@@ -610,7 +548,7 @@ body {
   background: var(--color-text);
   color: var(--color-bg);
   border: none;
-  border-radius: 100px;
+  border-radius: 10px;
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1rem;
@@ -621,9 +559,9 @@ body {
 
 .magnetic-btn:hover {
   transform: translateY(-4px);
-  background: var(--color-accent);
+  background: #D91303;
   color: #fff;
-  box-shadow: 0 15px 40px rgba(255, 0, 234, 0.3);
+  box-shadow: 0 15px 40px #D91303;
 }
 
 @media (max-width: 1024px) {

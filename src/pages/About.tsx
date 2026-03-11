@@ -125,6 +125,10 @@ const About: React.FC = () => {
           </div>
         </section>
 
+        <section className="banner2">
+
+        </section>
+
         <section className="about-history-section">
           <div className="history-text-content reveal">
             <h2 className="graffiti-text">O INÍCIO</h2>
@@ -136,6 +140,39 @@ const About: React.FC = () => {
             <div className="about-img-placeholder"></div>
             <div className="history-badge">EST. 2024</div>
             <div className="grunge-sticker sticker-4"><img src="StickerLogo.png" alt="" /></div>
+          </div>
+        </section>
+
+        <section className="timeline-section">
+          <div className="section-header reveal">
+            <h2>Nossa Trajetória</h2>
+            <p>Os marcos da nossa história</p>
+          </div>
+          <div className="timeline">
+            <div className="timeline-item reveal">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <span className="timeline-date">Janeiro de 2024</span>
+                <h3>O Início</h3>
+                <p>O primeiro encontro e a faísca que acendeu o movimento, com apenas um pequeno grupo de amigos.</p>
+              </div>
+            </div>
+            <div className="timeline-item reveal delay-1">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <span className="timeline-date">Abril de 2024</span>
+                <h3>Expansão</h3>
+                <p>Os encontros cresceram, necessitando de um espaço maior para acomodar a juventude sedenta.</p>
+              </div>
+            </div>
+            <div className="timeline-item reveal delay-2">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <span className="timeline-date">Hoje</span>
+                <h3>Movimento Consolidado</h3>
+                <p>Seguimos firmes no propósito de ser sal da terra e luz do mundo, transformando nossa comunidade.</p>
+              </div>
+            </div>
           </div>
         </section>
 

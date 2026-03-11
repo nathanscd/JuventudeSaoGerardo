@@ -31,24 +31,55 @@
 }
 
 :root {
-  --color-bg: #020617;
-  --color-text: #f5f5f5;
-  --color-text-muted: #94a3b8;
-  --color-accent: #42329c;
-  --color-accent-secondary: #36a0c3;
-  --glass-bg: rgba(255, 255, 255, 0.02);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --color-bg: #0a0a0c;
+  --color-text: #e2e2e2;
+  --color-text-muted: #8a8a93;
+  --color-accent: #6a1b9a;
+  --color-accent-secondary: #8e1d1d;
+  --glass-bg: rgba(20, 20, 25, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-surface: rgba(15, 15, 20, 0.6);
+  --bg-deep: #050505;
+  --primary-neon: #6a1b9a;
+  --accent-neon: #8e1d1d;
+
   --font-main: 'Lora', sans-serif;
   --font-heading: 'Raleway Black', sans-serif;
   --font-desc: 'Raleway', sans-serif;
   --transition-smooth: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  --bg-deep: #020617;
-  --glass-surface: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --primary-neon: #42329c;
-  --accent-neon: #bc2317; 
-  --text-main: #f5f5f5;
-  --text-muted: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .banner {
@@ -58,34 +89,49 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url('') no-repeat center center;
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   overflow: hidden;
   z-index: 1;
+  filter: grayscale(30%) contrast(1.1);
 }
 
-#welcome{
-  background: url('/Welcome.png') no-repeat center center;
-  background-size: cover;
+#welcome {
+  background-image: url('/Welcome.png');
 }
 
-#join{
-  background: url('/JoinBanner.png') no-repeat center center;
-  background-size: cover;
+#join {
+  background-image: url('/JoinBanner.png');
 }
 
-#about{
-  background: url('/AboutBanner.png') no-repeat center center;
-  background-size: cover;
+#about {
+  background-image: url('/AboutBanner.png');
 }
 
-#events{
-  background: url('/EventsBanner.png') no-repeat center center;
-  background-size: cover;
+#events {
+  background-image: url('/EventsBanner.png');
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    height: 70vh;
+    min-height: 500px;
+  }
 }
 
 @media (max-width: 768px) {
   .banner {
-    height: 45vh;
+    height: 60vh;
+    min-height: 400px;
+    background-position: top center;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 50vh;
+    min-height: 350px;
   }
 }

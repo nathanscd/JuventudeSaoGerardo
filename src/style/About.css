@@ -662,6 +662,10 @@
     flex-direction: column;
     gap: 24px; 
   }
+
+  .banner2{
+    height: 30vh;
+  }
   .bento-grid img, #middle {
     width: 80vw;
     transform: translateY(0);

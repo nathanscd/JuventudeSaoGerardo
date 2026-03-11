@@ -13,7 +13,6 @@ const Events: React.FC = () => {
 
   return (
     <div className="events-wrapper">
-      <div className="noise-overlay"></div>
       <Header />
 
       <div className="canvas-container">

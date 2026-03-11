@@ -59,7 +59,7 @@ const About: React.FC = () => {
           <div className="about-grid">
             <div className="about-card reveal">
               <div className="card-glow"></div>
-              <div className="grunge-sticker sticker-2">FOGO</div>
+              <div className="grunge-sticker sticker-2"><img src="/textures/027.png" alt="" /></div>
               <div className="icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square">
                   <path d="M12 2c0 0-5 6-5 11a5 5 0 0 0 10 0c0-5-5-11-5-11z"></path>
@@ -84,7 +84,7 @@ const About: React.FC = () => {
             
             <div className="about-card reveal delay-2">
               <div className="card-glow"></div>
-              <div className="grunge-sticker sticker-3">UNIDADE</div>
+              <div className="grunge-sticker sticker-3"><img src="/textures/mission.png" alt="" /></div>
               <div className="icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>

@@ -29,7 +29,6 @@ const About: React.FC = () => {
 
   return (
     <div className="about-page-wrapper" ref={scrollRef}>
-      <div className="noise-overlay"></div>
       <Header />
       
       <div className="canvas-container">

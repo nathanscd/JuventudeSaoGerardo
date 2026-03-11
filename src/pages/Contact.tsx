@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
 
       <main className="contact-container">
         <section className="contact-info fade-up">
-          <div className="info-header">
+          <div className="info-headerc">
             <span className="badge-glass">FALE CONOSCO</span>
             <h1 className="title-display">
               VAMOS <br/>

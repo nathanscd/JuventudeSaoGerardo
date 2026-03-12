@@ -9,6 +9,8 @@ import NoiseGrain from './components/NoiseGrain';
 import Gallery from './pages/Gallery';
 import JoinUs from './pages/JoinUs';
 import About from './pages/About';
+import Store from './pages/Store';
+import Music from './pages/Music';
 import './style/App.css';
 
 const ScrollToTop = () => {
@@ -33,6 +35,8 @@ const App = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/join" element={<JoinUs />} />
           <Route path="/about" element={<About />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/music" element={<Music />} />
         </Routes>
       </BrowserRouter>
     </SmoothScroll>

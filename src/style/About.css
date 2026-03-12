@@ -32,20 +32,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.about-banner {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: url('/AboutBanner.png') no-repeat center right;
-  background-size: cover;
-  overflow: hidden;
-  z-index: 1;
-  filter: grayscale(30%) contrast(1.1);
-}
-
 .canvas-container {
   position: fixed;
   top: 0; 
@@ -55,32 +41,6 @@
   z-index: 0; 
   pointer-events: none; 
   overflow: hidden;
-}
-
-.noise-overlay {
-  position: fixed; 
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  opacity: 0.05; 
-  z-index: 9999;
-  pointer-events: none;
-}
-
-.mesh-grid {
-  position: absolute; 
-  inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
-  mask-image: radial-gradient(circle at center, black, transparent 80%);
-  -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
-}
-
-.grunge-texture-soft {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at 20% 80%, rgba(142, 29, 29, 0.06) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 20%, rgba(106, 27, 154, 0.06) 0%, transparent 50%);
-  mix-blend-mode: overlay;
 }
 
 .reveal {
@@ -112,14 +72,14 @@
   text-align: center; 
   padding: 160px 5vw 80px; 
   overflow: hidden;
-  background: url('/backgrounds/RB Gradient Background 214.jpg')  no-repeat center center;
+  background: url('/backgrounds/RB Gradient Background 214.jpg') no-repeat center center;
   background-size: cover;
 }
 
 .about-orb {
   position: absolute; 
-  width: 600px; 
-  height: 600px;
+  width: clamp(300px, 50vw, 600px); 
+  height: clamp(300px, 50vw, 600px);
   border-radius: 50%; 
   filter: blur(150px); 
   opacity: 0.2; 
@@ -151,8 +111,8 @@
   transition: transform 0.3s ease;
 }
 
-.grunge-sticker img{
-  width: 100px;
+.grunge-sticker img {
+  width: clamp(80px, 15vw, 130px);
   height: auto;
 }
 
@@ -160,7 +120,7 @@
   transform: scale(1.05) rotate(0deg) !important;
 }
 
-.sticker-1 { top: 20%; right: 15%; transform: rotate(12deg); }
+.sticker-1 { top: 20%; right: 10%; transform: rotate(12deg); }
 .sticker-2 { top: -15px; right: 20px; transform: rotate(-5deg); }
 .sticker-3 { bottom: 20px; right: -10px; transform: rotate(8deg); }
 .sticker-4 { top: -20px; left: -20px; transform: rotate(-10deg); }
@@ -169,12 +129,12 @@
   font-family: "Sedgwick Ave Display", cursive;
   color: blueviolet;
   -webkit-text-stroke: 1.5px var(--color-text);
-  filter: drop-shadow(3px 3px 0px var(--accent-neon));
+  filter: drop-shadow(3px 3px 0px var(--color-accent-secondary));
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.banner2{
+.banner2 {
   background: url('/bannerAbout2.png');
   background-size: cover;
   background-position: top;
@@ -183,23 +143,17 @@
 }
 
 .about-badge {
-  font-family: var(--font-heading); 
-  font-size: 0.85rem; 
-  font-weight: 800;
-  text-transform: uppercase; 
-  letter-spacing: 2px;
-  padding: 10px 20px; 
-  border-radius: 4px;
-  border: 1px dashed rgba(255, 255, 255, 0.3); 
-  background: rgba(0,0,0,0.4);
-  margin-bottom: 30px; 
+  margin-bottom: 50px; 
   backdrop-filter: blur(12px); 
-  color: var(--color-text-muted);
+}
+
+.about-badge img {
+  width: clamp(100px, 20vw, 145px);
 }
 
 .about-hero h1 {
   font-family: var(--font-heading); 
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
   font-weight: 800; 
   line-height: 1.1; 
   margin-bottom: 24px; 
@@ -214,7 +168,7 @@
 }
 
 .about-hero p {
-  font-size: 1.25rem; 
+  font-size: clamp(1rem, 3vw, 1.25rem); 
   color: var(--color-text-muted); 
   line-height: 1.6;
   max-width: 650px;
@@ -226,7 +180,7 @@
 
 .about-grid {
   display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 30px; 
   max-width: 1300px; 
   margin: 0 auto;
@@ -281,7 +235,7 @@
 
 .about-card h3 { 
   font-family: var(--font-heading); 
-  font-size: 1.6rem; 
+  font-size: clamp(1.3rem, 4vw, 1.6rem); 
   margin-bottom: 12px; 
   color: #fff;
 }
@@ -306,14 +260,14 @@
 }
 
 .section-header h2 { 
-  font-size: clamp(2.5rem, 5vw, 4rem); 
+  font-size: clamp(2rem, 5vw, 4rem); 
   font-weight: 800; 
   margin-bottom: 16px; 
 }
 
 .section-header p { 
   color: var(--color-text-muted); 
-  font-size: 1.2rem; 
+  font-size: clamp(1rem, 3vw, 1.2rem); 
   max-width: 600px; 
   margin: 0 auto; 
 }
@@ -387,7 +341,7 @@
 
 .about-quote-container blockquote {
   font-family: var(--font-heading); 
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   font-weight: 800; 
   margin: 0 auto 30px; 
   line-height: 1.2; 
@@ -396,7 +350,7 @@
 }
 
 .about-quote-container cite {
-  font-size: 1.1rem; 
+  font-size: clamp(0.9rem, 2vw, 1.1rem); 
   color: var(--color-text-muted); 
   font-weight: 700;
   text-transform: uppercase; 
@@ -418,12 +372,12 @@
 }
 
 .history-text-content h2 { 
-  font-size: clamp(2.5rem, 4vw, 3.5rem); 
+  font-size: clamp(2rem, 5vw, 3.5rem); 
   margin-bottom: 24px; 
 }
 
 .history-text-content p { 
-  font-size: 1.15rem; 
+  font-size: clamp(1rem, 2.5vw, 1.15rem); 
   color: var(--color-text-muted); 
   margin-bottom: 20px; 
   line-height: 1.7; 
@@ -445,16 +399,16 @@
 .about-img-placeholder {
   width: 100%; 
   height: 100%; 
-  background-image: url('/Louvor.jpeg');
+  background-image: url('/AboutPhoto.png');
   background-size: cover; 
   background-position: center; 
   border-radius: 20px;
-  filter: grayscale(40%) contrast(1.1); 
+  filter: grayscale(20%) contrast(1.1) blur(0.5px); 
   transition: all 0.6s ease;
 }
 
 .history-image-wrapper:hover .about-img-placeholder { 
-  filter: grayscale(0%) contrast(1.1); 
+  filter: grayscale(0%) contrast(1.1) blur(0px); 
   transform: scale(1.02); 
 }
 
@@ -475,10 +429,11 @@
   position: absolute; 
   bottom: -20px; 
   right: -20px; 
-  background: var(--color-accent);
+  background: url("/backgrounds/RB Gradient Background 1000.jpg") no-repeat center center;
+  background-size: cover;
   color: #fff;
   font-family: var(--font-heading); 
-  font-size: 1.2rem; 
+  font-size: clamp(0.9rem, 3vw, 1.2rem); 
   font-weight: 800;
   padding: 20px 30px; 
   border-radius: 4px; 
@@ -567,17 +522,19 @@
   margin-bottom: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  font-size: clamp(0.85rem, 2vw, 1rem);
 }
 
 .timeline-content h3 {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   margin-bottom: 10px;
 }
 
 .timeline-content p {
   color: var(--color-text-muted);
   line-height: 1.6;
+  font-size: clamp(0.95rem, 2vw, 1rem);
 }
 
 .about-cta-section { 
@@ -612,15 +569,14 @@
 }
 
 .cta-inner-box h2 { 
-  font-family: var(--font-heading); 
-  font-size: clamp(3rem, 6vw, 4.5rem); 
+  font-size: clamp(2rem, 6vw, 4.5rem); 
   font-weight: 800; 
   margin-bottom: 20px; 
   letter-spacing: -1px; 
 }
 
 .cta-inner-box p { 
-  font-size: 1.2rem; 
+  font-size: clamp(1rem, 3vw, 1.2rem); 
   color: var(--color-text-muted); 
   margin-bottom: 5px; 
   font-style: italic; 
@@ -634,7 +590,9 @@
 }
 
 .about-btn-glow {
-  display: inline-block; 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: 22px 56px;
   background: var(--color-text);
   color: var(--color-bg); 
@@ -663,23 +621,27 @@
     gap: 24px; 
   }
 
-  .banner2{
+  .banner2 {
     height: 30vh;
   }
+  
   .bento-grid img, #middle {
     width: 80vw;
     transform: translateY(0);
   }
+  
   .bento-grid img#middle:hover, .bento-grid img:hover {
     width: 85vw;
     transform: scale(1.02) translateY(-10px);
   }
+  
   .about-history-section { 
     flex-direction: column; 
     text-align: center; 
     gap: 60px; 
     padding: 10vh 5vw;
   }
+  
   .history-text-content { 
     max-width: 100%; 
   }
@@ -689,11 +651,47 @@
   .about-hero { 
     padding-top: 140px; 
   }
+
+  .history-image-wrapper { 
+    height: 1000px; 
+    min-height: 500px;
+  }
+
+  .about-img-placeholder{
+    height: 500px;
+    width: 467px;
+  }
+  
   .cta-inner-box { 
     padding: 80px 24px; 
     border-radius: 32px; 
   }
+  
   .history-image-wrapper { 
     height: 400px; 
+  }
+  
+  .timeline::after {
+    left: 31px; 
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 0;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+  
+  .timeline-dot {
+    left: 21px !important;
+    right: auto;
+  }
+  
+  .about-btn-glow {
+    width: 100%;
+    padding: 22px 20px;
   }
 }

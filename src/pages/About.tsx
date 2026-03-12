@@ -37,7 +37,7 @@ const About: React.FC = () => {
       </div>
 
       <main className="main-content">
-        <section className='about-banner' id='about'></section>
+        <section className='banner' id='about'></section>
 
         <section className="about-hero">
           <div className="about-orb orb-purple"></div>
@@ -45,7 +45,7 @@ const About: React.FC = () => {
           
           <div className="grunge-sticker sticker-1 reveal"><img src="StickerLogo.png" alt="" /></div>
           
-          <span className="about-badge reveal">NOSSA IDENTIDADE</span>
+          <span className="about-badge reveal"><img src="StickerIdentity.png" alt="" /></span>
           <h1 className="reveal delay-1">
             <span className="graffiti-text">Misericórdia</span> QUE <br/>
             <span className="about-highlight">TRANSFORMA</span>
@@ -145,7 +145,7 @@ const About: React.FC = () => {
 
         <section className="timeline-section">
           <div className="section-header reveal">
-            <h2>Nossa Trajetória</h2>
+            <h2 className="graffiti-text">Nossa Trajetória</h2>
             <p>Os marcos da nossa história</p>
           </div>
           <div className="timeline">
@@ -179,7 +179,7 @@ const About: React.FC = () => {
         <section className="about-cta-section reveal">
           <div className="cta-inner-box">
             <div className="cta-orb"></div>
-            <h2>O CÉU É LOGO ALI</h2>
+            <h2 className='graffiti-text'>O CÉU É LOGO ALI</h2>
             <p>"Não tenhais medo de ser santos."</p>
             <span className="author-cta">— São João Paulo II</span>
             <br/><br/>

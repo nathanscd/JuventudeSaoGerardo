@@ -116,8 +116,8 @@ img {
 
 @media (max-width: 1024px) {
   .banner {
-    height: 70vh;
-    min-height: 500px;
+    height: 30vh;
+    background-size: contain;
   }
 }
 

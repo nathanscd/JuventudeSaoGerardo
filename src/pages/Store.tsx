@@ -245,7 +245,7 @@ const Store: React.FC = () => {
     <div className="store-wrapper" ref={scrollRef}>      
       <Header />
       
-      <section className="banner" id="store-banner"></section>
+      <section className="bannerstore" id="store-banner"></section>
 
       <div className="canvas-container">
         <div className="gradient-sphere sphere-store-1"></div>

@@ -23,7 +23,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: auto;
   margin: 0 auto;
   padding: 100px 10vw 120px;
   gap: 4vw;
@@ -41,7 +40,6 @@ body {
 
 .hero-content {
   flex: 1.2;
-  max-width: 700px;
 }
 
 .badge img {

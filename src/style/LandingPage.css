@@ -334,8 +334,9 @@ body {
 }
 
 .feature-row:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgb(223, 82, 255);
   transform: translateX(10px);
+  color: black;
   border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -360,7 +361,7 @@ body {
 
 .feature-info p {
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: whitesmoke;
   margin: 0;
   font-weight: 300;
 }

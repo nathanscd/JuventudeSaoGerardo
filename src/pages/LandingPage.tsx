@@ -9,7 +9,6 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="landing-wrapper">
-      <div className="noise-overlay"></div>
       <Header />
 
       <main className="main-content">

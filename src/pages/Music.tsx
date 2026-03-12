@@ -32,7 +32,7 @@ const Music: React.FC = () => {
     <div className="music-wrapper" ref={scrollRef}>
       <Header />
 
-      <section className="banner" id="music-banner"></section>
+      <section className="musicbanner" id="music-banner"></section>
 
       <div className="canvas-container">
         <div className="gradient-sphere sphere-music-1"></div>

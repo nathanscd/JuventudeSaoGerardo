@@ -138,7 +138,7 @@ const About: React.FC = () => {
           <div className="history-image-wrapper reveal delay-1">
             <div className="history-glow"></div>
             <div className="about-img-placeholder"></div>
-            <div className="history-badge">EST. 2024</div>
+            <div className="history-badge">DESDE 2024</div>
             <div className="grunge-sticker sticker-4"><img src="StickerLogo.png" alt="" /></div>
           </div>
         </section>

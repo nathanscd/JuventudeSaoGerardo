@@ -119,9 +119,9 @@ const About: React.FC = () => {
               </svg>
             </div>
             <blockquote>
-              Se fordes aquilo que Deus quer, colocareis fogo no mundo inteiro.
+              A humanidade só encontrará a verdadeira paz, amando até doer.
             </blockquote>
-            <cite>— Santa Catarina de Sena</cite>
+            <cite>— Santa Teresa de Calcutá</cite>
           </div>
         </section>
 

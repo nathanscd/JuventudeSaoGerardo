@@ -333,9 +333,9 @@ const Store: React.FC = () => {
               </svg>
             </div>
             <blockquote>
-              "Tudo o que fizerdes, fazei-o de bom grado, como para o Senhor e não para os homens."
+              O importante não é o que se dá, mas o amor com que se dá.
             </blockquote>
-            <cite>— Colossenses 3, 23</cite>
+            <cite>— Santa Teresa de Calcutá </cite>
           </div>
         </section>
 

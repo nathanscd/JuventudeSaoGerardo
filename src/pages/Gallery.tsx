@@ -70,6 +70,8 @@ const Gallery: React.FC = () => {
   return (
     <div className="gallery-wrapper">
       <Header />
+
+      <div className="bannerPhotos"></div>
       
       <div className="ambient-orbs-gallery">
         <div className="orb-g orb-g-1"></div>

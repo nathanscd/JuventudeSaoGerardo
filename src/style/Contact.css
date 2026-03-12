@@ -90,9 +90,13 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #fff 0%, var(--color-accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: "Sedgwick Ave Display", cursive;
+  color: blueviolet;
+  margin-top: 10px;
+  -webkit-text-stroke: 1.5px var(--color-text);
+  filter: drop-shadow(3px 3px 0px var(--color-accent-secondary));
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .description {

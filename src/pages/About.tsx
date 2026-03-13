@@ -176,6 +176,146 @@ const About: React.FC = () => {
           </div>
         </section>
 
+        <section className="ministerios-section reveal">
+          <div className="section-header">
+            <span className="badge-glass">LIDERANÇA & SERVIÇO</span>
+            <h2>NOSSOS <br/><span className="graffiti-text">Ministérios</span></h2>
+            <p>A raiz que nos sustenta e os ramos que dão frutos. Conheça a estrutura e os membros de cada ministério do nosso grupo.</p>
+          </div>
+
+          <div className="org-tree">
+            <div className="coord-wrapper reveal delay-1">
+              <div className="coord-card">
+                <div className="coord-glow"></div>
+                <div className="coord-avatar-box">
+                  <img src="/CoordProfile.png" alt="Coordenador Geral" />
+                </div>
+                <div className="coord-info">
+                  <span className="role-badge">COORDENADOR GERAL</span>
+                  <h3>Sueslley Rodrigues</h3>
+                  <p>Guiando a juventude com amor e devoção.</p>
+                </div>
+              </div>
+              <div className="tree-trunk-main"></div>
+            </div>
+
+            <div className="org-branches">
+              <div className="org-branch reveal delay-2">
+                <div className="min-card">
+                  <div className="min-header">
+                    <div className="min-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M9 18V5l12-2v13"></path>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <circle cx="18" cy="16" r="3"></circle>
+                      </svg>
+                    </div>
+                    <h3>Música</h3>
+                  </div>
+                  <div className="min-members-list">
+                    <div className="member-item">
+                      <div className="member-avatar">ML</div>
+                      <div className="member-info">
+                        <h4>Ana Carolina</h4>
+                        <span>Líder do Ministério</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">PA</div>
+                      <div className="member-info">
+                        <h4>Nathanael Secundo</h4>
+                        <span>Vocalista / Violão</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">LS</div>
+                      <div className="member-info">
+                        <h4>Felipe Sasaki</h4>
+                        <span>Cantor</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">LS</div>
+                      <div className="member-info">
+                        <h4>Mariana</h4>
+                        <span>Cantora</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="org-branch reveal delay-3">
+                <div className="min-card">
+                  <div className="min-header">
+                    <div className="min-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </div>
+                    <h3>Comunicação</h3>
+                  </div>
+                  <div className="min-members-list">
+                    <div className="member-item">
+                      <div className="member-avatar">AC</div>
+                      <div className="member-info">
+                        <h4>Ana Beatriz</h4>
+                        <span>Líder do Ministério</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">GF</div>
+                      <div className="member-info">
+                        <h4>Grazielly</h4>
+                        <span>Social Media</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="org-branch reveal delay-4">
+                <div className="min-card">
+                  <div className="min-header">
+                    <div className="min-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                      </svg>
+                    </div>
+                    <h3>Intercessão</h3>
+                  </div>
+                  <div className="min-members-list">
+                    <div className="member-item">
+                      <div className="member-avatar">MR</div>
+                      <div className="member-info">
+                        <h4>Sueslley Rodrigues</h4>
+                        <span>Líder do Ministério</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">SO</div>
+                      <div className="member-info">
+                        <h4>Vitor Lopes</h4>
+                        <span>Intercessor</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">TC</div>
+                      <div className="member-info">
+                        <h4>Rafaela</h4>
+                        <span>Intercessor</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="about-cta-section reveal">
           <div className="cta-inner-box">
             <div className="cta-orb"></div>

@@ -213,7 +213,7 @@ const Store: React.FC = () => {
       .join('%0A');
     
     const message = `Olá! Gostaria de fazer um pedido da Boa Nova Store:%0A%0A${cartSummary}%0A%0ATotal: R$ ${cartTotal.toFixed(2)}`;
-    window.open(`https://wa.me/5500000000000?text=${message}`, '_blank');
+    window.open(`https://wa.me/558596157381?text=${message}`, '_blank');
   };
 
   return (
@@ -323,7 +323,7 @@ const Store: React.FC = () => {
             </div>
             <p className="hero-description">Impressão em serigrafia que garante a durabilidade da camisa por anos sem desbotar ou descolar.</p>
             
-            <h2 className="hero-title width">Estampas que carregam amor</h2>
+            <h2 className="hero-title width">Estampas que carregam próposito</h2>
             <p className='hero-description'>Cada estampa nossa é focada no amor de Deus e trazida a nós por Ele próprio. Nada aqui é apenas por beleza, tudo tem uma razão e cada estampa carrega esse amor da comunidade que Deus nos deu.</p>
             <div className='community-banner' />
 

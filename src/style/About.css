@@ -537,6 +537,411 @@
   font-size: clamp(0.95rem, 2vw, 1rem);
 }
 
+/* ==========================================================================
+   SEÇÃO MINISTÉRIOS - ÁRVORE HIERÁRQUICA
+   ========================================================================== */
+
+.ministerios-section {
+  padding: 120px 5vw;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  overflow-x: hidden;
+}
+
+.ministerios-section .section-header {
+  text-align: center;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ministerios-section .badge-glass {
+  display: inline-block;
+  padding: 10px 24px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-accent);
+  margin-bottom: 24px;
+  backdrop-filter: blur(12px);
+}
+
+.ministerios-section h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 24px;
+  letter-spacing: -2px;
+  color: #fff;
+}
+
+.ministerios-section p {
+  font-size: clamp(1.1rem, 3vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* ESTRUTURA DA ÁRVORE */
+
+.org-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.coord-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.coord-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--color-accent);
+  border-radius: 24px;
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(106, 27, 154, 0.2);
+  position: relative;
+  transition: var(--transition-smooth);
+  max-width: 500px;
+}
+
+.coord-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 50px rgba(106, 27, 154, 0.4);
+}
+
+.coord-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: var(--color-accent);
+  filter: blur(60px);
+  opacity: 0.15;
+  z-index: -1;
+  border-radius: 24px;
+}
+
+.coord-avatar-box {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid var(--color-accent);
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #1a1a1a;
+}
+
+.coord-avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coord-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.role-badge {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--color-accent-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.coord-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 4px;
+  letter-spacing: -0.5px;
+}
+
+.coord-info p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.tree-trunk-main {
+  width: 2px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.org-branches {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.org-branch {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 50px;
+  padding-inline: 15px;
+}
+
+/* Desenho das linhas horizontais e verticais da árvore */
+.org-branch::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.org-branch:first-child::before {
+  left: 50%;
+  width: 50%;
+}
+
+.org-branch:last-child::before {
+  left: 0;
+  width: 50%;
+}
+
+.org-branch::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%);
+}
+
+/* CARDS DOS MINISTÉRIOS E MEMBROS */
+
+.min-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 380px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: var(--transition-smooth);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.min-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.min-header {
+  padding: 30px 24px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.min-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.min-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.min-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.min-members-list {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.member-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid transparent;
+  transition: var(--transition-smooth);
+}
+
+.member-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(4px);
+}
+
+.member-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-info h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e2e2e2;
+  margin-bottom: 4px;
+}
+
+.member-info span {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE DA ÁRVORE (MOBILE)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .org-branches {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .org-branch::before,
+  .org-branch::after,
+  .tree-trunk-main {
+    display: none;
+  }
+  .org-branch {
+    padding-top: 30px;
+    flex: 0 0 100%;
+  }
+  .org-tree {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ministerios-section {
+    padding: 80px 5vw;
+  }
+  
+  .coord-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  /* Estilo em Árvore Lateral para Mobile */
+  .org-branches {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 24px;
+    position: relative;
+    gap: 30px;
+  }
+
+  .org-branches::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 24px;
+    bottom: 50px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .org-branch {
+    padding-top: 0;
+    padding-left: 30px;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .org-branch::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .org-branch:first-child::before,
+  .org-branch:last-child::before {
+    left: 0;
+  }
+  
+  .min-card {
+    max-width: 100%;
+  }
+}
+
 .about-cta-section { 
   padding: 0 5vw 120px; 
 }

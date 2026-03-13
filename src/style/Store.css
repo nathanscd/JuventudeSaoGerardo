@@ -34,7 +34,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  padding-bottom: 80px;
 
   /* ==============================================================
      1. BANNER E FUNDOS (NÃO ALTERADOS COMO PEDIDO)
@@ -182,6 +181,7 @@
     font-family: var(--font-heading);
     font-size: clamp(4rem, 9vw, 7.5rem);
     font-weight: 900;
+    max-width: 1000px;
     line-height: 0.9;
     letter-spacing: -0.04em;
     margin-bottom: 24px;
@@ -395,6 +395,89 @@
     font-style: normal;
   }
 
+  /* specs-section */
+  .specs-section {
+    padding: 80px 0;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .specs-description{
+    font-family: var(--font-desc);
+    font-size: 1.1rem;
+    opacity: 0.7;
+    max-width: 500px;
+  }
+
+  .t-shirts-banner {
+    margin-top: 60px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw;
+    height: 92vh;
+    background: url('/BannerTshirts.png') no-repeat center center;
+    background-size: contain;
+  }
+
+  .material{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+  }
+
+  .material span{
+    font-size: 15vw;
+  }
+
+  .material h2{
+    margin-top: 20vh;
+    text-transform: uppercase;
+  }
+
+  .material img{
+    width: 30vw;
+  }
+
+  #Frente{
+    z-index: 10;
+  }
+
+  #Trás{
+    margin-left: -15vw;
+  }
+
+  #Trás1{
+    z-index: 10;
+    width: 30vw;
+  }
+  
+  #Trás2{
+    margin-left: -15vw;
+    z-index: 8;
+  }
+
+  .camisasMockup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: -20vw;
+  }
+
+  .community-banner{
+    background: url('/community-banner.png') no-repeat center center;
+    height: 80vh;
+    width: 80vw;
+    margin: 12vh 2vw;
+    background-size: cover;
+    z-index: 1;
+    filter: grayscale(30%) contrast(1.1);
+  }
+
   /* ==============================================================
      6. GRID DE PRODUTOS
   ============================================================== */
@@ -438,12 +521,12 @@
   .shop-img-box {
     position: relative;
     width: 100%;
-    height: 320px;
+    height: 400px;
     background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 15px;
     overflow: hidden;
     border-bottom: 1px solid rgba(255,255,255,0.03);
     cursor: pointer;
@@ -454,8 +537,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     background: var(--color-accent);
     filter: blur(70px);
     opacity: 0.05;
@@ -468,8 +551,9 @@
   .shop-img-box img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     position: relative;
+    border-radius: 10px;
     z-index: 2;
     transition: var(--transition-smooth);
     filter: drop-shadow(0 20px 30px rgba(0,0,0,0.6));
@@ -1041,72 +1125,439 @@
     margin-top: 20px;
   }
 
+  /* ==================== */
+  /* GALERIA & THUMBNAILS */
+  /* ==================== */
+  .premium-modal-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .modal-main-visual {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .modal-main-visual img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+  }
+
+  .modal-thumbnails {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .thumb-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .thumb-box img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+  }
+
+  .thumb-box:hover, .thumb-box.active {
+    opacity: 1;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 10px rgba(106, 27, 154, 0.3);
+  }
+
+  /* ==================== */
+  /* VARIAÇÕES (COR/TAM)  */
+  /* ==================== */
+  .product-variant-group {
+    margin-bottom: 24px;
+  }
+
+  .product-variant-group label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .product-variant-group label span {
+    color: #fff;
+    font-weight: 800;
+  }
+
+  .color-selector-grid, .size-selector-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .color-circle-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  .color-circle-btn.selected {
+    border-color: var(--color-text);
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-text);
+  }
+
+  .size-box-btn {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .size-box-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .size-box-btn.selected {
+    background: var(--color-text);
+    color: var(--color-bg);
+    border-color: var(--color-text);
+  }
+
+  .modal-error-text {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+    animation: shake 0.4s ease-in-out;
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+
   /* ==============================================================
      10. RESPONSIVO
   ============================================================== */
   @media (max-width: 1024px) {
-    .featured-product {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      padding: 40px;
-    }
-    
-    .product-visual { min-height: 400px; }
-    
-    .bannerstore { height: 70vh; }
-    
-    .premium-modal-grid {
-      grid-template-columns: 1fr;
-      min-height: auto;
-    }
-    
-    .premium-modal-visual {
-      min-height: 350px;
-      border-right: none;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
+
+  .main-content{
+    padding: 0 5vw;
   }
 
-  @media (max-width: 768px) {
-    .store-hero { padding-top: 140px; }
-    
-    .bannerstore { height: 60vh; }
-
-    .hero-title { font-size: clamp(3rem, 10vw, 4.5rem); }
-    
-    .premium-cart-item {
-      grid-template-columns: 80px 1fr;
-      gap: 20px;
-      padding: 16px;
-    }
-    
-    .cart-item-actions {
-      grid-column: 1 / -1;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding-top: 16px;
-      margin-top: 8px;
-    }
-    
-    .cart-item-total { display: none; }
-    
-    .cart-item-price-mobile {
-      display: block;
-      font-family: var(--font-heading);
-      font-weight: 800;
-      color: #fff;
-      margin-top: 8px;
-    }
-    
-    .floating-cart-btn {
-      bottom: 24px;
-      right: 24px;
-      padding: 14px 20px;
-    }
-    
-    .premium-modal-details { padding: 40px 24px; }
-    .premium-cart-content { padding: 30px 20px; }
+  .featured-product{
+    grid-template-columns: 1fr;
+    gap:40px;
+    padding:40px;
   }
+
+  .product-visual{
+    min-height:350px;
+  }
+
+  .t-shirts-banner{
+    height:60vh;
+    background-size:cover;
+  }
+
+  .community-banner{
+    width:100%;
+    height:30vh;
+  }
+
+  .camisasMockup{
+    gap:0;
+  }
+
+  .material img{
+    width:50vw;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .store-wrapper{
+    overflow-x:hidden;
+  }
+
+  .bannerstore{
+    height:55vh;
+    min-height:420px;
+    margin:8vh 3vw;
+  }
+
+  .store-hero{
+    padding:120px 0 60px;
+  }
+
+  .hero-title{
+    font-size:clamp(2.5rem,12vw,4rem);
+    line-height:1;
+  }
+
+  .hero-description{
+    font-size:1rem;
+    padding:0 5vw;
+  }
+
+  .featured-product{
+    padding:28px;
+    border-radius:28px;
+  }
+
+  .product-title{
+    font-size:clamp(2rem,8vw,3rem);
+  }
+
+  .product-subtitle{
+    font-size:1rem;
+  }
+
+  .product-visual{
+    min-height:280px;
+  }
+
+  .main-product-img{
+    max-width:100%;
+  }
+
+  .spec-item{
+    padding:16px;
+    gap:16px;
+  }
+
+  .spec-icon{
+    width:40px;
+    height:40px;
+  }
+
+  .store-quote-section{
+    padding:60px 0;
+  }
+
+  .quote-container blockquote{
+    font-size:clamp(1.4rem,6vw,2rem);
+  }
+
+  .specs-section{
+    padding:60px 0;
+  }
+
+  .t-shirts-banner{
+    height:30vh;
+    background-size:cover;
+  }
+
+  .material{
+    margin-top:12vh;
+  }
+
+  .material span{
+    font-size:22vw;
+  }
+
+  .material h2{
+    margin-top:10vh;
+  }
+
+  .material img{
+    width:60vw;
+  }
+
+  .camisasMockup{
+    flex-direction:column;
+    gap:30px;
+  }
+
+  #Frente,
+  #Trás,
+  #Trás1,
+  #Trás2{
+    margin-left:0;
+    width:70vw;
+  }
+
+  .community-banner{
+    width:100%;
+    height:30vh;
+    margin:8vh auto;
+  }
+
+  .shop-header{
+    margin-bottom:60px;
+  }
+
+  .shop-grid{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .shop-img-box{
+    height:320px;
+  }
+
+  .shop-info{
+    padding:24px;
+  }
+
+  .shop-price{
+    font-size:1.4rem;
+  }
+
+  .btn-buy{
+    padding:12px 22px;
+    font-size:0.75rem;
+  }
+
+  .floating-cart-btn{
+    bottom:20px;
+    right:20px;
+    padding:12px 18px;
+  }
+
+  .premium-modal-grid{
+    grid-template-columns:1fr;
+  }
+
+  .premium-modal-visual{
+    padding:30px;
+    min-height:250px;
+    border-right:none;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+  }
+
+  .premium-modal-details{
+    padding:30px 24px;
+  }
+
+  .premium-modal-footer{
+    flex-direction:column;
+    gap:20px;
+    align-items:flex-start;
+  }
+
+  .premium-modal-price{
+    font-size:1.8rem;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .hero-title{
+    font-size:clamp(2rem,13vw,3rem);
+  }
+
+  .hero-description{
+    font-size:0.95rem;
+  }
+
+  .store-badge{
+    padding:10px 20px;
+    font-size:0.65rem;
+  }
+
+  .product-title{
+    font-size:clamp(1.8rem,9vw,2.4rem);
+  }
+
+  .product-subtitle{
+    font-size:0.95rem;
+  }
+
+  .product-visual{
+    min-height:220px;
+  }
+
+  .main-product-img{
+    max-width:90%;
+  }
+
+  .spec-item h4{
+    font-size:1rem;
+  }
+
+  .spec-item span{
+    font-size:0.85rem;
+  }
+
+  .shop-img-box{
+    height:260px;
+  }
+
+  .shop-info h3{
+    font-size:1.2rem;
+  }
+
+  .shop-info p{
+    font-size:0.9rem;
+  }
+
+  .shop-price{
+    font-size:1.2rem;
+  }
+
+  .btn-buy{
+    padding:10px 18px;
+  }
+
+  .floating-cart-btn{
+    gap:10px;
+  }
+
+  .floating-cart-total{
+    font-size:1rem;
+  }
+
+  .premium-cart-content{
+    padding:24px 18px;
+  }
+
+  .cart-header h2{
+    font-size:1.5rem;
+  }
+
+  .premium-cart-item{
+    grid-template-columns:70px 1fr;
+  }
+
+  .cart-item-img{
+    width:70px;
+    height:70px;
+  }
+
+}
 }

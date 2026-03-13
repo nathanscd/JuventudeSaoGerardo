@@ -846,6 +846,10 @@
   flex-direction: column;
 }
 
+.lider{
+  background-color: var(--primary-neon);
+}
+
 .member-info h4 {
   font-family: var(--font-heading);
   font-size: 1.1rem;

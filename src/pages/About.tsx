@@ -187,13 +187,47 @@ const About: React.FC = () => {
             <div className="coord-wrapper reveal delay-1">
               <div className="coord-card">
                 <div className="coord-glow"></div>
-                <div className="coord-avatar-box">
-                  <img src="/CoordProfile.png" alt="Coordenador Geral" />
-                </div>
                 <div className="coord-info">
-                  <span className="role-badge">COORDENADOR GERAL</span>
-                  <h3>Sueslley Rodrigues</h3>
-                  <p>Guiando a juventude com amor e devoção.</p>
+                  <span className="role-badge">COORDENAÇÃO GERAL</span>
+                  <h3>CONSELHO</h3>
+                  <div className="min-members-list">
+                    <div className="member-item">
+                      <div className="member-avatar">SR</div>
+                      <div className="member-info">
+                        <h4>Sueslley Rodrigues</h4>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">AP</div>
+                      <div className="member-info">
+                        <h4>Ana Paula</h4>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">VL</div>
+                      <div className="member-info">
+                        <h4>Vitor Lopes</h4>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">AC</div>
+                      <div className="member-info">
+                        <h4>Ana Carolina</h4>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">LC</div>
+                      <div className="member-info">
+                        <h4>Luca Carvalho</h4>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">RB</div>
+                      <div className="member-info">
+                        <h4>Rafaela Bezerra</h4>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="tree-trunk-main"></div>
@@ -213,31 +247,31 @@ const About: React.FC = () => {
                     <h3>Música</h3>
                   </div>
                   <div className="min-members-list">
-                    <div className="member-item">
-                      <div className="member-avatar">ML</div>
+                    <div className="member-item lider">
+                      <div className="member-avatar">AC</div>
                       <div className="member-info">
                         <h4>Ana Carolina</h4>
                         <span>Líder do Ministério</span>
                       </div>
                     </div>
                     <div className="member-item">
-                      <div className="member-avatar">PA</div>
+                      <div className="member-avatar">NS</div>
                       <div className="member-info">
                         <h4>Nathanael Secundo</h4>
-                        <span>Vocalista / Violão</span>
+                        <span>Cantor / Guitarra</span>
                       </div>
                     </div>
                     <div className="member-item">
-                      <div className="member-avatar">LS</div>
+                      <div className="member-avatar">FS</div>
                       <div className="member-info">
                         <h4>Felipe Sasaki</h4>
                         <span>Cantor</span>
                       </div>
                     </div>
                     <div className="member-item">
-                      <div className="member-avatar">LS</div>
+                      <div className="member-avatar">MP</div>
                       <div className="member-info">
-                        <h4>Mariana</h4>
+                        <h4>Mariana Peres</h4>
                         <span>Cantora</span>
                       </div>
                     </div>
@@ -259,17 +293,38 @@ const About: React.FC = () => {
                     <h3>Comunicação</h3>
                   </div>
                   <div className="min-members-list">
-                    <div className="member-item">
-                      <div className="member-avatar">AC</div>
+                    <div className="member-item lider">
+                      <div className="member-avatar">LC</div>
                       <div className="member-info">
-                        <h4>Ana Beatriz</h4>
+                        <h4>Luca Carvalho</h4>
                         <span>Líder do Ministério</span>
                       </div>
                     </div>
                     <div className="member-item">
-                      <div className="member-avatar">GF</div>
+                      <div className="member-avatar">AG</div>
                       <div className="member-info">
-                        <h4>Grazielly</h4>
+                        <h4>Ane Grazielly</h4>
+                        <span>Social Media</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">AC</div>
+                      <div className="member-info">
+                        <h4>Ana Carolina</h4>
+                        <span>Social Media</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">GB</div>
+                      <div className="member-info">
+                        <h4>Guilherme Barbosa</h4>
+                        <span>Social Media</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">GN</div>
+                      <div className="member-info">
+                        <h4>Giselli Nogueira</h4>
                         <span>Social Media</span>
                       </div>
                     </div>
@@ -288,24 +343,59 @@ const About: React.FC = () => {
                     <h3>Intercessão</h3>
                   </div>
                   <div className="min-members-list">
-                    <div className="member-item">
-                      <div className="member-avatar">MR</div>
+                    <div className="member-item lider">
+                      <div className="member-avatar">SR</div>
                       <div className="member-info">
                         <h4>Sueslley Rodrigues</h4>
                         <span>Líder do Ministério</span>
                       </div>
                     </div>
                     <div className="member-item">
-                      <div className="member-avatar">SO</div>
+                      <div className="member-avatar">VL</div>
                       <div className="member-info">
                         <h4>Vitor Lopes</h4>
                         <span>Intercessor</span>
                       </div>
                     </div>
                     <div className="member-item">
-                      <div className="member-avatar">TC</div>
+                      <div className="member-avatar">RB</div>
                       <div className="member-info">
-                        <h4>Rafaela</h4>
+                        <h4>Rafaela Bezerra</h4>
+                        <span>Intercessor</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">LC</div>
+                      <div className="member-info">
+                        <h4>Luca Carvalho</h4>
+                        <span>Intercessor</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">IG</div>
+                      <div className="member-info">
+                        <h4>Isabele Gomes</h4>
+                        <span>Intercessor</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">DC</div>
+                      <div className="member-info">
+                        <h4>Diego Carvalho</h4>
+                        <span>Intercessor</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">AN</div>
+                      <div className="member-info">
+                        <h4>Anna Negreiros</h4>
+                        <span>Intercessor</span>
+                      </div>
+                    </div>
+                    <div className="member-item">
+                      <div className="member-avatar">AJ</div>
+                      <div className="member-info">
+                        <h4>Anna Júlia</h4>
                         <span>Intercessor</span>
                       </div>
                     </div>

@@ -106,7 +106,7 @@ const Music: React.FC = () => {
             <div className="track-card reveal delay-1">
               <div className="track-img-box">
                 <div className="track-glow"></div>
-                <img src="/AlbumCover2.png" alt="Música 2" />
+                <img src="/Tiago4.png" alt="Música 2" />
                 <div className="track-play-overlay">
                   <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M8 5v14l11-7z"/>
@@ -122,7 +122,7 @@ const Music: React.FC = () => {
             <div className="track-card reveal delay-2">
               <div className="track-img-box">
                 <div className="track-glow"></div>
-                <img src="/AlbumCover3.png" alt="Música 3" />
+                <img src="/QuoVadisDomine.png" alt="Música 3" />
                 <div className="track-play-overlay">
                   <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M8 5v14l11-7z"/>
@@ -130,7 +130,7 @@ const Music: React.FC = () => {
                 </div>
               </div>
               <div className="track-info">
-                <h3>Alegria</h3>
+                <h3>Quo Vadis, Domine?</h3>
                 <span>Single • 2026</span>
               </div>
             </div>

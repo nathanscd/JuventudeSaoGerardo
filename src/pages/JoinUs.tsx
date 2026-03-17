@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 const JoinUs: React.FC = () => {
   return (
     <div className="join-wrapper">
-      <div className="noise-overlay"></div>
       
       <Header />
 

@@ -316,14 +316,9 @@
 }
 
 .about-quote-section {
-  padding: 120px 5vw; 
-  display: flex; 
-  justify-content: center;
-  position: relative; 
-  overflow: hidden;
-  background-color: #050505;
-  border-top: 1px dashed rgba(255,255,255,0.1);
-  border-bottom: 1px dashed rgba(255,255,255,0.1);
+  background: url("/stc1.png") no-repeat center center;
+  background-size: contain;
+  height: 50dvh;
 }
 
 .about-quote-container {
@@ -542,9 +537,13 @@
    ========================================================================== */
 
 .ministerios-section {
+  background: url("/ministérios.png") no-repeat center center;
+  background-size: contain;
+  height: 180dvh;
+  width: 100vw;
+  background-repeat: no-repeat;
   padding: 120px 5vw;
-  max-width: 1400px;
-  margin: 0 auto;
+  margin: 10vh auto;
   position: relative;
   z-index: 5;
   overflow-x: hidden;
